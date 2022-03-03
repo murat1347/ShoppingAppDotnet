@@ -1,0 +1,15 @@
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\bin\Debug\net5.0\HYS.Persistence.deps.json
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\bin\Debug\net5.0\HYS.Persistence.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\bin\Debug\net5.0\HYS.Persistence.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\bin\Debug\net5.0\HYS.Domain.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\bin\Debug\net5.0\HYS.Domain.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.csproj.AssemblyReference.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.AssemblyInfoInputs.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.AssemblyInfo.cs
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.csproj.CopyComplete
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\refint\HYS.Persistence.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\HYS.Persistence.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Persistence\obj\Debug\net5.0\ref\HYS.Persistence.dll

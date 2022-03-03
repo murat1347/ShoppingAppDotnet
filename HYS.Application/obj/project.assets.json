@@ -1,0 +1,170 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "Dapper/2.0.123": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {}
+        }
+      },
+      "Dapper.Contrib/2.0.78": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.78"
+        },
+        "compile": {
+          "lib/net5.0/Dapper.Contrib.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.Contrib.dll": {}
+        }
+      },
+      "HYS.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/HYS.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HYS.Domain.dll": {}
+        }
+      },
+      "HYS.Persistence/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Dapper": "2.0.123",
+          "Dapper.Contrib": "2.0.78",
+          "HYS.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/HYS.Persistence.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/HYS.Persistence.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dapper/2.0.123": {
+      "sha512": "RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "type": "package",
+      "path": "dapper/2.0.123",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.0.123.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Dapper.Contrib/2.0.78": {
+      "sha512": "sUfDVIf8LlHNiz3MfUFodeyRiemfN1JFkPxYjCxFWlwNPg1iQ49mB+0E89TkywWs4X8fiRWOVDQgtH5FtzK5Kw==",
+      "type": "package",
+      "path": "dapper.contrib/2.0.78",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dapper.contrib.2.0.78.nupkg.sha512",
+        "dapper.contrib.nuspec",
+        "lib/net461/Dapper.Contrib.dll",
+        "lib/net461/Dapper.Contrib.xml",
+        "lib/net5.0/Dapper.Contrib.dll",
+        "lib/net5.0/Dapper.Contrib.xml",
+        "lib/netstandard2.0/Dapper.Contrib.dll",
+        "lib/netstandard2.0/Dapper.Contrib.xml"
+      ]
+    },
+    "HYS.Domain/1.0.0": {
+      "type": "project",
+      "path": "../HYS.Domain/HYS.Domain.csproj",
+      "msbuildProject": "../HYS.Domain/HYS.Domain.csproj"
+    },
+    "HYS.Persistence/1.0.0": {
+      "type": "project",
+      "path": "../HYS.Persistence/HYS.Persistence.csproj",
+      "msbuildProject": "../HYS.Persistence/HYS.Persistence.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "HYS.Domain >= 1.0.0",
+      "HYS.Persistence >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kodplus.dev1\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj",
+      "projectName": "HYS.Application",
+      "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj",
+      "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
+              "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj"
+            },
+            "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {
+              "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Application.deps.json
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Application.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Application.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Domain.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Persistence.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Domain.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\bin\Debug\net5.0\HYS.Persistence.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.csproj.AssemblyReference.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.AssemblyInfoInputs.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.AssemblyInfo.cs
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.csproj.CoreCompileInputs.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.csproj.CopyComplete
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\refint\HYS.Application.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\HYS.Application.pdb
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Application\obj\Debug\net5.0\ref\HYS.Application.dll

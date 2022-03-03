@@ -1,0 +1,17 @@
+CREATE PROC [dbo].[sp_InsertVal] (
+  @Id int output,
+  @Name nvarchar(50),
+  @Description nvarchar(1000),
+  @Stock int,
+  @Price int,
+  @CategoryId int,
+  @AddedDate datetime,
+  @ModifiedDate datetime,
+  @AddedBy nvarchar(50)
+  
+) AS
+BEGIN
+    Insert Into Products (Name,Description,Stock,Price,CategoryId,AddedDate,AddedBy)
+	VALUES(@Name,@Description,@Stock,@Price,@CategoryId,@AddedDate,@AddedBy)
+END
+GO
