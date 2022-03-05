@@ -10,3 +10,6 @@ C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\obj\Debug\net5.0\HYS.D
 C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\obj\Debug\net5.0\refint\HYS.Domain.dll
 C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\obj\Debug\net5.0\HYS.Domain.pdb
 C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\obj\Debug\net5.0\ref\HYS.Domain.dll
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\bin\Debug\net5.0\HYS.Domain.runtimeconfig.json
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\bin\Debug\net5.0\HYS.Domain.runtimeconfig.dev.json
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.Domain\obj\Debug\net5.0\HYS.Domain.genruntimeconfig.cache

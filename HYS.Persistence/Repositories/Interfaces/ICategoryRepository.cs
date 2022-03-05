@@ -9,5 +9,6 @@ namespace HYS.Persistence.Repositories.Interfaces
 {
     public interface ICategoryRepository:IGenericRepository<Category>
     {
+        List<Product> GetPostsByCategory(int id);
     }
 }

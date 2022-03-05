@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HYS.Domain", "HYS.Domain\HYS.Domain.csproj", "{BF0104EB-5C4E-469B-A2E2-8F0D02675B5F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HYS.Domain", "HYS.Domain\HYS.Domain.csproj", "{BF0104EB-5C4E-469B-A2E2-8F0D02675B5F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{40873062-0CD2-46AD-A162-A7B539CC14FE}"
 EndProject
@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{B5A3A1EB-5DDE-4259-8A54-0A6B378D10DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HYS.Application", "HYS.Application\HYS.Application.csproj", "{B466D8E3-E767-4066-8C5B-D4AD0C9C08BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HYS.Application", "HYS.Application\HYS.Application.csproj", "{B466D8E3-E767-4066-8C5B-D4AD0C9C08BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HYS.API", "HYS.API\HYS.API.csproj", "{5F7BA6E5-ED91-4307-8C00-DF1312859C58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HYS.API", "HYS.API\HYS.API.csproj", "{5F7BA6E5-ED91-4307-8C00-DF1312859C58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HYS.Persistence", "HYS.Persistence\HYS.Persistence.csproj", "{F0CC57E0-C370-41A8-BC85-DAAE1F938333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HYS.Persistence", "HYS.Persistence\HYS.Persistence.csproj", "{F0CC57E0-C370-41A8-BC85-DAAE1F938333}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitOfWork", "UnitOfWork", "{04D41F40-30AB-41A4-8E41-5B441C698E98}"
 EndProject

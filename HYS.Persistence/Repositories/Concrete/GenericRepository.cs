@@ -21,29 +21,34 @@ namespace HYS.Persistence.Repositories.Concrete
 
         public List<TEntity> GetAll()
         {
-            return (_dbConnection.Query<TEntity>("SELECT * FROM dbo.Products").ToList());
+            return (_dbConnection.GetAll<TEntity>().ToList());
         }
 
         public TEntity GetById(int id)
         {
             //return (_dbConnection.QueryFirst<TEntity>($"SELECT * FROM dbo.Products WHERE Id= '{id}' "));
-            return GetById(id);
+            return _dbConnection.Get<TEntity>(id);
         }
 
         public void Insert(TEntity entity)
         {
-            //_dbConnection.Query<Product>("sp_InsertVal", entity, commandType: CommandType.StoredProcedure);
+            var query = @"
+             Insert Into Category (Name,Description,Stock,Price,CategoryId,AddedDate,AddedBy)
+	VALUES(@Name,@Description,@Stock,@Price,@CategoryId,@AddedDate,@AddedBy)";
+            //_dbConnection.Query(query,entity);
             _dbConnection.Insert(entity);
         }
 
         public void Update(TEntity entity)
         {
-            _dbConnection.Query("sp_UpdateVal", entity, commandType: CommandType.StoredProcedure);
+            _dbConnection.Update(entity);
+            //_dbConnection.Query("sp_UpdateVal", entity, commandType: CommandType.StoredProcedure);
         }
 
         public void Delete(TEntity entity)
         {
-            _dbConnection.Query("sp_DeleteValue", entity, commandType: CommandType.StoredProcedure);
+            _dbConnection.Delete(entity);
+            //_dbConnection.Query("sp_DeleteValue", entity, commandType: CommandType.StoredProcedure);
         }
     }
 }
