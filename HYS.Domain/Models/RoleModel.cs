@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace HYS.Domain.Models
 {
-    internal class RoleModel
+    public class RoleModel
     {
+        public string Name { get; set; }
     }
 }
