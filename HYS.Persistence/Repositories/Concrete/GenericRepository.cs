@@ -32,9 +32,9 @@ namespace HYS.Persistence.Repositories.Concrete
 
         public void Insert(TEntity entity)
         {
-            var query = @"
-             Insert Into Category (Name,Description,Stock,Price,CategoryId,AddedDate,AddedBy)
-	VALUES(@Name,@Description,@Stock,@Price,@CategoryId,@AddedDate,@AddedBy)";
+ //           var query = @"
+ //            Insert Into Category (Name,Description,Stock,Price,CategoryId,AddedDate,AddedBy)
+	//VALUES(@Name,@Description,@Stock,@Price,@CategoryId,@AddedDate,@AddedBy)";
             //_dbConnection.Query(query,entity);
             _dbConnection.Insert(entity);
         }

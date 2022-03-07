@@ -21,41 +21,13 @@ namespace HYS.API.Controllers
             _userManager = userManager;
         }
 
-        public IActionResult Index()
-        {
-            return Ok();
-        }
-
+        [HttpGet]
         public IActionResult RoleList()
         {
             return Ok(_roleManager.Roles);
         }
         
-        public IActionResult RoleCreate()
-        {
-           
-            return Ok();
-        }
-        [HttpPost]
-        public async Task<IActionResult> RoleCreate(RoleModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                var result = await _roleManager.CreateAsync(new IdentityRole(model.Name));
-                if (result.Succeeded)
-                {
-                    return Redirect("Index");
-                }
-                else
-                {
-                    foreach (var error in result.Errors)
-                    {
-                              ModelState.AddModelError("",error.Description);
-                    }
-                }
-            }
-            return Ok();
-        }
+        
 
     }
 }

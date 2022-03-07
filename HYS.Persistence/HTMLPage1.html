@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<div id="products">
+
+</div>
+
+<script>
+    const getProducts = async () => {
+        const response = await fetch('https://localhost:44306/api/Product');
+        const products = await response.json();
+
+        // cors
+
+        setProducts(products); // [{"productId":"1","name":"samsung s20"},{"productId":"2","name":"samsung s21"}]
+    }
+
+    const setProducts = (products) => {
+        const productsDiv = document.getElementById('products');
+
+        products.forEach(product => {
+            productsDiv.innerHTML += `
+                    <div>
+                        <p>${product.name}</p>
+                        <p>${product.price}</p>
+                    </div>
+                `;
+        });
+    }
+
+    getProducts();
+</script>
+</body>
+</html>

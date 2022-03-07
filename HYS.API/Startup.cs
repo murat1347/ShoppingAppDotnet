@@ -28,6 +28,8 @@ namespace HYS.API
 {
     public class Startup
     {
+        public IConfiguration _configuration;
+        readonly string myAllowOrigins = "_myAllowOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,8 +38,10 @@ namespace HYS.API
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services, IConfiguration _configuration)
+        public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+            services.AddScoped<IServiceCollection, ServiceCollection>();
             services.AddScoped<IEmailSender, SmtpEmailSender>(i =>
                 new SmtpEmailSender(
                     _configuration["EmailSender:Host"],
@@ -73,7 +77,8 @@ namespace HYS.API
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             });
-            services.ConfigureApplicationCookie(options => {
+            services.ConfigureApplicationCookie(options =>
+            {
                 options.LoginPath = "/account/login";
                 options.LogoutPath = "/account/logout";
                 options.AccessDeniedPath = "/account/accessdenied";
@@ -85,6 +90,13 @@ namespace HYS.API
                     Name = ".ShopApp.Security.Cookie",
                     SameSite = SameSiteMode.Strict
                 };
+            });
+            
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy(
+                    name: myAllowOrigins,
+                    Builder => { Builder.AllowAnyOrigin(); });
             });
             //services.AddScoped<IProductService, ProductManager>();
             services.AddTransient<IDbConnection>(con => new SqlConnection(Configuration.GetConnectionString("DefaultConnection")));
@@ -108,6 +120,7 @@ namespace HYS.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors(myAllowOrigins);
 
             app.UseAuthorization();
 
