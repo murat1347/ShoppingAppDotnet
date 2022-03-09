@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using HYS.API.EmailService;
 using HYS.Domain.Entities;
 using HYS.Domain.Models;
@@ -14,6 +15,12 @@ namespace HYS.API.Controllers
     {
         private UserManager<User> _userManager;
         private IEmailSender _emailSender;
+
+        public RegisterController(UserManager<User> userManager)
+        {
+            _userManager = userManager;
+        }
+
         [HttpGet]
         public IActionResult Register()
         {
@@ -22,7 +29,7 @@ namespace HYS.API.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+       // [ValidateAntiForgeryToken]
         public async Task<IActionResult> Register(RegisterModel model)
         {
             if (!ModelState.IsValid)
@@ -37,11 +44,12 @@ namespace HYS.API.Controllers
                 UserName = model.UserName,
                 Email = model.Email
             };
+           
             var result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
                 var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                var url = Url.Action("ConfirmEmail", "Account", new
+                var url = Url.Action("ConfirmEmail", "ConfirmEmail", new
                 {
                     userId = user.Id,
                     token = code

@@ -1,0 +1,43 @@
+.App {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.select {
+  padding: 7px 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+  margin-bottom: 10px;
+}
+.list {
+  display: flex;
+}
+.listItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #d3d3d3;
+  margin-right: 5px;
+}
+.listItem.active {
+  background-color: rgb(255, 247, 247);
+  border-color: rgb(122, 119, 119);
+}
+.listItem > span {
+  font-size: 12px;
+  color: #b9b8b8;
+}
+.listItem > div {
+  color: #b9b8b8;
+  font-size: 12px;
+}
+.listItem > div > span:first-child {
+  font-weight: 700;
+  margin-right: 8px;
+}

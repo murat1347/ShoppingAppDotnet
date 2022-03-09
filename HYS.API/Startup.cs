@@ -96,7 +96,7 @@ namespace HYS.API
             {
                 opt.AddPolicy(
                     name: myAllowOrigins,
-                    Builder => { Builder.AllowAnyOrigin(); });
+                    Builder => { Builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();});
             });
             //services.AddScoped<IProductService, ProductManager>();
             services.AddTransient<IDbConnection>(con => new SqlConnection(Configuration.GetConnectionString("DefaultConnection")));
@@ -117,7 +117,7 @@ namespace HYS.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "HYS.API v1"));
             }
             app.UseAuthentication();
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseCors(myAllowOrigins);
