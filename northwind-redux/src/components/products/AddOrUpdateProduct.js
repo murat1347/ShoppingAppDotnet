@@ -4,6 +4,7 @@ import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
 import { validate } from "@babel/types";
+import { Axios } from "axios";
 
 function AddOrUpdateProduct({
   products,

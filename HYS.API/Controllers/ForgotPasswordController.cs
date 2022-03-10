@@ -11,8 +11,14 @@ namespace HYS.API.Controllers
     [ApiController]
     public class ForgotPasswordController : ControllerBase
     {
-        private UserManager<User> _userManager;
-        private IEmailSender _emailSender;
+        private readonly UserManager<User> _userManager;
+        private readonly IEmailSender _emailSender;
+
+        public ForgotPasswordController(UserManager<User> userManager, IEmailSender emailSender)
+        {
+            _userManager = userManager;
+            _emailSender = emailSender;
+        }
 
         [HttpGet]
         public IActionResult ForgotPassword()

@@ -55,12 +55,12 @@ namespace HYS.API.Controllers
                     token = code
                 });
 
-                await _emailSender.SendEmailAsync(model.Email, "Hesabınızı onaylayınız.", $"Lütfen email hesabınızı onaylamak için linke <a href='https://localhost:5001{url}'>tıklayınız.</a>");
+               // await _emailSender.SendEmailAsync(model.Email, "Hesabınızı onaylayınız.", $"Lütfen email hesabınızı onaylamak için linke <a href='https://localhost:5001{url}'>tıklayınız.</a>");
 
-                return RedirectToAction("Login","Account");
+               return Ok();
             }
 
-            ModelState.AddModelError("", "Unkown Error");
+            //ModelState.AddModelError("", "Unkown Error");
             return Ok();
         }
     }

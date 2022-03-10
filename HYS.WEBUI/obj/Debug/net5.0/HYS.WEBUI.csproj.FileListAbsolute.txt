@@ -1,0 +1,8 @@
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.csproj.AssemblyReference.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.AssemblyInfoInputs.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.AssemblyInfo.cs
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.csproj.CoreCompileInputs.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.RazorAssemblyInfo.cache
+C:\Users\kodplus.dev1\source\repos\Kodplus.HYS\HYS.WEBUI\obj\Debug\net5.0\HYS.WEBUI.RazorAssemblyInfo.cs

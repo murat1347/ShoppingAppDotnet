@@ -1,0 +1,276 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.WEBUI\\HYS.WEBUI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj",
+        "projectName": "HYS.Application",
+        "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj",
+        "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
+                "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj"
+              },
+              "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {
+                "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj",
+        "projectName": "HYS.Domain",
+        "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj",
+        "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            },
+            "Microsoft.Extensions.Identity.Core": {
+              "target": "Package",
+              "version": "[5.0.14, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
+        "projectName": "HYS.Persistence",
+        "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
+        "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
+                "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Dapper.Contrib": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.WEBUI\\HYS.WEBUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.WEBUI\\HYS.WEBUI.csproj",
+        "projectName": "HYS.WEBUI",
+        "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.WEBUI\\HYS.WEBUI.csproj",
+        "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.WEBUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj": {
+                "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Application\\HYS.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

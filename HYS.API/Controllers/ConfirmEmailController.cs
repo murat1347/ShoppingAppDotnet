@@ -30,7 +30,7 @@ namespace HYS.API.Controllers
             var result = await _userManager.ConfirmEmailAsync(user, token);
             if (result.Succeeded)
             {
-                Redirect("Index");
+                return Ok();
             }
 
             return Ok();

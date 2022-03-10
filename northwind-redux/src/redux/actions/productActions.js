@@ -1,5 +1,5 @@
 import * as actionTypes from "./actionTypes";
-
+import axios, { Axios } from "axios";
 export function getProductsSuccess(products) {
   return { type: actionTypes.GET_PRODUCTS_SUCCESS, payload: products };
 }
@@ -13,14 +13,18 @@ export function updateProductSuccess(product) {
 }
 
 export function saveProductApi(product) {
-  
-  product.addedDate=null;
-  product.modifiedDate=null;
-  product.addedBy='string';
+
+  product.addedDate = "2022-03-09T07:57:25.543Z"
+  product.modifiedDate = "2022-03-09T07:57:25.543Z";
+  product.addedBy = 'string';
   console.log(product);
-  return fetch("https://localhost:44306/api/Product/  " + (product.id || ""), {
+  axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*'
+  return fetch("http://localhost:4988/api/Product/  " + (product.id || ""), {
     method: product.id ? "PUT" : "POST",
-    headers: { "content-type": "application/json" },
+    headers: {
+      "content-type": "application/json", "Access-Control-Allow-Headers": "*", // this will allow all CORS requests
+      "Access-Control-Allow-Methods": 'OPTIONS,POST,GET' // this states the allowed methods
+    },
     body: JSON.stringify(product)
   })
     .then(handleResponse)
@@ -28,7 +32,7 @@ export function saveProductApi(product) {
 }
 
 export function saveProduct(product) {
-  return function(dispatch) {
+  return function (dispatch) {
     return saveProductApi(product)
       .then(savedProduct => {
         product.id
@@ -41,23 +45,23 @@ export function saveProduct(product) {
   };
 }
 
-export async function handleResponse(response){
-  if(response.ok){
-    return response.json()
+export async function handleResponse(response) {
+  if (response.ok) {
+    return response.ok
   }
 
   const error = await response.text()
   throw new Error(error)
 }
 
-export function handleError(error){
+export function handleError(error) {
   console.error("Bir hata oluştu")
   throw error;
 }
 
 export function getProducts(categoryId) {
-  return function(dispatch) {
-    let url = "https://localhost:44306/api/Product/";
+  return function (dispatch) {
+    let url = "http://localhost:4988/api/Product/";
     if (categoryId) {
       url = url + "?categoryId=" + categoryId;
     }

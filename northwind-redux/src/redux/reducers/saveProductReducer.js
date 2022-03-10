@@ -6,9 +6,9 @@ export default function saveProductReducer(
   action
 ) {
   switch (action.type) {
-    case actionTypes.UPDATE_PRODUCT_SUCCESS:
+    case actionTypes=== actionTypes.UPDATE_PRODUCT_SUCCESS:
       return action.payload;
-    case actionTypes.CREATE_PRODUCT_SUCCESS:
+    case actionTypes=== actionTypes.CREATE_PRODUCT_SUCCESS:
       return action.payload;
     default:
       return state;

@@ -11,17 +11,17 @@ namespace HYS.API.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    [AutoValidateAntiforgeryToken]
+    //[AutoValidateAntiforgeryToken]
     public class AccountController : ControllerBase
     {
         private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
-        private IEmailSender _emailSender;
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IEmailSender emailSender)
+        //private IEmailSender _emailSender;
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager/*, IEmailSender emailSender*/)
         {
             _userManager = userManager;
             _signInManager = signInManager;
-            _emailSender = emailSender;
+            //_emailSender = emailSender;
         }
         [HttpGet]
         public IActionResult Login(string ReturnUrl = null)
@@ -34,7 +34,7 @@ namespace HYS.API.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+       // [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginModel model)
         {
             if (!ModelState.IsValid)

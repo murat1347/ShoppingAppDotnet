@@ -4,7 +4,7 @@ import categoryListReducer from "./categoryListReducer"
 import productListReducer from "./productListReducer"
 import cartReducer from "./cartReducer"
 import saveProductReducer from "./saveProductReducer"
-
+import registerReducer from "./registerReducer"
 
 
 const rootReducer = combineReducers({
@@ -12,7 +12,8 @@ const rootReducer = combineReducers({
     categoryListReducer,
     productListReducer,
     cartReducer,
-    saveProductReducer
+    saveProductReducer,
+    registerReducer
 })
 
 export default rootReducer;

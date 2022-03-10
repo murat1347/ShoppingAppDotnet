@@ -29,11 +29,15 @@ export default class Navi extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand><Link to="/">Northwind Mağazası</Link></NavbarBrand>
+          <NavbarBrand><Link to="/">KodPlus</Link></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavLink>
+                <Link to="/register">Kayıt Ol</Link>
+              </NavLink>
               <NavItem>
+
                 <NavLink>
                   <Link to="/saveproduct">Ürün ekle</Link>
                 </NavLink>

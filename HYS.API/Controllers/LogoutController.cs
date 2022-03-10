@@ -10,7 +10,13 @@ namespace HYS.API.Controllers
     [ApiController]
     public class LogoutController : ControllerBase
     {
-        private SignInManager<User> _signInManager;
+        private readonly SignInManager<User> _signInManager;
+
+        public LogoutController(SignInManager<User> signInManager)
+        {
+            _signInManager = signInManager;
+        }
+
         [HttpPost]
         public async Task<IActionResult> Logout()
         {
