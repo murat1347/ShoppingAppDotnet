@@ -12,18 +12,22 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using HYS.API.EmailService;
 using HYS.API.Identity;
+using HYS.API.JwtTokenHandler;
 using HYS.Application.Services.Concrete;
 using HYS.Application.Services.Interfaces;
 using HYS.Domain.Context;
 using HYS.Domain.Entities;
 using HYS.Persistence.Repositories.Concrete;
 using HYS.Persistence.Repositories.Interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace HYS.API
 {
@@ -46,7 +50,7 @@ namespace HYS.API
          
 
             services.AddDbContext<ApplicationContext>(_ => _.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
-
+            services.AddScoped<JwtTokenGenerator>();
             services.AddDbContext<AppDbContext>(_ => _.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
             services.AddScoped<ICategoryService, CategoryManager>();
@@ -54,9 +58,29 @@ namespace HYS.API
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped(typeof(IGenericService<>), typeof(GenericManager<>));
-            services.AddIdentityCore<User>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<AppDbContext>()
-                .AddTokenProvider<DataProtectorTokenProvider<User>>(TokenOptions.DefaultProvider);
+            //services.AddIdentityCore<User>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<AppDbContext>()
+            //    .AddTokenProvider<DataProtectorTokenProvider<User>>(TokenOptions.DefaultProvider);
+            services.AddIdentityCore<User>(opt =>
+                {
+                    opt.User.RequireUniqueEmail = true;
+                })
+               
+                .AddEntityFrameworkStores<AppDbContext>();
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(opt =>
+                {
+                    opt.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateLifetime = true,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8
+                            .GetBytes(Configuration["JWTSettings:TokenKey"]))
+                    };
+                });
+            
             services.Configure<IdentityOptions>(options =>
             {
                 // password
@@ -76,6 +100,20 @@ namespace HYS.API
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             });
+
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt=>
+            //{
+            //    opt.RequireHttpsMetadata=false;
+            //    opt.TokenValidationParameters= new TokenValidationParameters
+            //    {
+            //        ValidIssuer = "http://localhost",
+            //        ValidAudience = "http://localhost",
+            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Muratmuratmurat.")),
+            //        ValidateIssuerSigningKey = true,
+            //        ValidateLifetime = true,
+            //        ClockSkew = TimeSpan.Zero
+            //    };
+            //});
             //services.ConfigureApplicationCookie(options =>
             //{
             //    options.LoginPath = "/account/login";
@@ -90,6 +128,7 @@ namespace HYS.API
             //        SameSite = SameSiteMode.Strict
             //    };
             //});
+            services.AddAuthorization();
             services.AddControllers();
             services.AddCors(opt =>
             {
@@ -128,7 +167,7 @@ namespace HYS.API
 
             app.UseRouting();
             app.UseCors(myAllowOrigins);
-
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

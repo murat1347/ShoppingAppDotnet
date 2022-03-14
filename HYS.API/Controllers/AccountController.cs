@@ -1,8 +1,11 @@
 ﻿using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using HYS.API.Dtos;
 using HYS.API.EmailService;
+using HYS.API.JwtTokenHandler;
 using HYS.Domain.Entities;
 using HYS.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,55 +19,65 @@ namespace HYS.API.Controllers
     {
         private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
+
+        private JwtTokenGenerator _generator;
+
         //private IEmailSender _emailSender;
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager/*, IEmailSender emailSender*/)
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager,
+            JwtTokenGenerator generator /*, IEmailSender emailSender*/)
         {
             _userManager = userManager;
             _signInManager = signInManager;
+            _generator = generator;
             //_emailSender = emailSender;
         }
+
         [HttpGet]
         public IActionResult Login(string ReturnUrl = null)
         {
 
-            return Ok(new LoginModel()
-            {
-                ReturnUrl = ReturnUrl
-            });
+            return Ok();
         }
 
         [HttpPost]
-       // [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginModel model)
+        // [ValidateAntiForgeryToken]
+        public async Task<ActionResult<UserDto>> Login(UserDto loginDto)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest();
-            }
+            var user = await _userManager.FindByNameAsync(loginDto.Email);
 
-            var user = await _userManager.FindByNameAsync(model.UserName);
-            if (user == null)
-            {
-                ModelState.AddModelError("", "User not found");
-                return Ok();
-            }
+            if (user == null || !await _userManager.CheckPasswordAsync(user, loginDto.Password))
+                return Unauthorized();
 
-            var result = await _signInManager.PasswordSignInAsync(user, model.Password, true, true);
 
-            if (result.Succeeded)
-            {
-                Redirect(model.ReturnUrl ?? "~/");
-            }
 
-            if (await _userManager.IsEmailConfirmedAsync(user))
+            return new UserDto
             {
-                ModelState.AddModelError("", "Email not confirmed");
-            }
-            ModelState.AddModelError("", "UserName or password fail");
-            return Ok(model);
+                Email = user.Email,
+                Token = await _generator.GenerateToken(user),
+
+            };
         }
 
-        
+        [Authorize]
+        [HttpGet("currentUser")]
+        public async Task<ActionResult<UserDto>> GetCurrentUser()
+        {
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);
+
+
+
+            return new UserDto
+            {
+                Email = user.Email,
+                Token = await _generator.GenerateToken(user),
+
+            };
+
+
+        }
+
+
 
     }
 }
+
