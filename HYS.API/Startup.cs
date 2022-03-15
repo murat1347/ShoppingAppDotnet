@@ -50,7 +50,7 @@ namespace HYS.API
          
 
             services.AddDbContext<ApplicationContext>(_ => _.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
-            services.AddScoped<JwtTokenGenerator>();
+            services.AddScoped<JwtTokenHandler.JwtTokenGenerator>();
             services.AddDbContext<AppDbContext>(_ => _.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<ApplicationContext>().AddDefaultTokenProviders();
             services.AddScoped<ICategoryService, CategoryManager>();

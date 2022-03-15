@@ -11,9 +11,11 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
+      
       try {
-        const me = await fetchMe();
-        setLoggedIn(true);
+        const me = getCurrentUser;
+        console.log(me)
+        setLoggedIn(false);
         setUser(me);
         setLoading(false);
       } catch {
@@ -25,19 +27,22 @@ const AuthProvider = ({ children }) => {
   const login = (data) => {
     setLoggedIn(true);
     setUser(data);
-    localStorage.setItem('access-token', data.accessToken);
-    localStorage.setItem('refresh-token', data.refreshToken);
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('refleshToken', data.refleshToken);
   };
 
   const logout = async (cb) => {
     setLoggedIn(false);
     setUser(null);
-    await fetchLogout();
-    localStorage.removeItem('access-token');
-    localStorage.removeItem('refresh-token');
+    //await fetchLogout();
+    localStorage.removeItem('token');
+    localStorage.removeItem('refleshToken');
     cb();
   };
 
+  const getCurrentUser=(data)=>{
+    localStorage.getItem('refleshToken');
+  }
   const values = {
     loggedIn,
     user,

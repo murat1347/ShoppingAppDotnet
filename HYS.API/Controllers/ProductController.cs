@@ -1,5 +1,6 @@
 ﻿using HYS.Application.Services.Interfaces;
 using HYS.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

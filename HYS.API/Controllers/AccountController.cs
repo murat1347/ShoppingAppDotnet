@@ -53,7 +53,8 @@ namespace HYS.API.Controllers
             return new UserDto
             {
                 Email = user.Email,
-                Token = await _generator.GenerateToken(user),
+                token = await _generator.GenerateToken(user),
+                RefleshToken = await _generator.GenerateToken(user),
 
             };
         }
@@ -69,9 +70,11 @@ namespace HYS.API.Controllers
             return new UserDto
             {
                 Email = user.Email,
-                Token = await _generator.GenerateToken(user),
+                token = await _generator.GenerateToken(user),
+                RefleshToken = await _generator.GenerateToken(user)
+                
 
-            };
+        };
 
 
         }
@@ -80,4 +83,3 @@ namespace HYS.API.Controllers
 
     }
 }
-

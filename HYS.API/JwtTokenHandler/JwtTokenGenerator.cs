@@ -26,10 +26,10 @@ namespace HYS.API.JwtTokenHandler
         public async Task<string> GenerateToken(User user)
         {
             var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Email, user.Email),
-                    new Claim(ClaimTypes.Name, user.UserName)
-                };
+            {
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Name, user.UserName)
+            };
 
             var roles = await _userManager.GetRolesAsync(user);
 

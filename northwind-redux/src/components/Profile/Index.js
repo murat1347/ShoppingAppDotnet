@@ -3,8 +3,8 @@ import React from 'react';
 import { useAuth } from '../../contexts/AuthContext';
 
 function Profile({ history }) {
-  const { user, logout } = useAuth();
 
+  const { user, logout } = useAuth();
   const handleLogout = async () => {
     logout(() => {
       history.push('/');
@@ -14,8 +14,8 @@ function Profile({ history }) {
   return (
     <div>
       <Text fontSize={22}>Profile</Text>
-      {console.log(user)}
       {JSON.stringify(user)}
+-
       <br />
       <br />
       <Button colorScheme='pink' variant='solid' onClick={handleLogout}>

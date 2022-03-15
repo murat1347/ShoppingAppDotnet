@@ -19,14 +19,17 @@ import {
     const { login } = useAuth();
     const formik = useFormik({
       initialValues: {
-        userName: '',
-        password: '',
+        email: '',
+        password: ''
       },
       validationSchema,
       onSubmit: async (values, bag) => {
         try {
-          const loginResponse = await fetchLogin(values);
-          
+          const loginResponse = await fetchLogin({
+            email :values.email,
+            password : values.password
+          });
+          console.log(values);
           login(loginResponse);
           history.push('/profile');
         } catch (e) {
@@ -51,11 +54,11 @@ import {
                 <FormControl>
                   <FormLabel>E-mail</FormLabel>
                   <Input
-                    name='userName'
+                    name='email'
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
-                    value={formik.values.userName}
-                    isInvalid={formik.touched.userName && formik.errors.userName}
+                    value={formik.values.email}
+                    isInvalid={formik.touched.mail && formik.errors.email}
                   />
                 </FormControl>
                 <FormControl mt={4}>
