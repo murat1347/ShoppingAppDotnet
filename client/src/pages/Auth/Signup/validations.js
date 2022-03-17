@@ -1,18 +1,30 @@
-import * as yup from 'yup';
+import * as yup from "yup";
 
 const validations = yup.object().shape({
-  email: yup
-    .string()
-    .email('Geçerli bir e-mail giriniz')
-    .required('Zorunlu alan'),
-  password: yup
-    .string()
-    .min(5, 'Parolanız en az 5 karakter olmalıdır.')
-    .required('Zorunlu Alan'),
-  passwordConfirm: yup
-    .string()
-    .oneOf([yup.ref('password')], 'Parolalar uyuşmuyor!')
-    .required('Zorunlu alan'),
+	email: yup
+		.string()
+		.email("Gerçerli bir email girin.")
+		.required("Zorunlu alan."),
+	userName: yup
+		.string()
+		.email("Gerçerli bir email girin.")
+		.required("Zorunlu alan."),
+	firstName: yup
+		.string()
+		.email("Gerçerli bir email girin.")
+		.required("Zorunlu alan."),
+	lastName: yup
+		.string()
+		.email("Gerçerli bir email girin.")
+		.required("Zorunlu alan."),
+	password: yup
+		.string()
+		.min(5, "Parolanız en az 5 karakter olmalıdır")
+		.required(),
+	rePassword: yup
+		.string()
+		.oneOf([yup.ref("password")], "Parolalar uyuşmuyor.")
+		.required(),
 });
 
 export default validations;
