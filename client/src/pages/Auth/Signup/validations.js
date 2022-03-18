@@ -7,15 +7,12 @@ const validations = yup.object().shape({
 		.required("Zorunlu alan."),
 	userName: yup
 		.string()
-		.email("Gerçerli bir email girin.")
 		.required("Zorunlu alan."),
 	firstName: yup
 		.string()
-		.email("Gerçerli bir email girin.")
 		.required("Zorunlu alan."),
 	lastName: yup
 		.string()
-		.email("Gerçerli bir email girin.")
 		.required("Zorunlu alan."),
 	password: yup
 		.string()

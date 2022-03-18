@@ -57,7 +57,7 @@ function Basket() {
 							<li key={item._id} style={{ marginBottom: 15 }}>
 								<Link to={`/product/${item.id}`}>
 									<Text fontSize="18">
-										{item.title} - {item.price} TL
+										{item.name} - {item.price} TL
 									</Text>
 									{/* <Image
 										htmlWidth={200}
@@ -71,7 +71,7 @@ function Basket() {
 									mt="2"
 									size="sm"
 									colorScheme="pink"
-									onClick={() => removeFromBasket(item._id)}
+									onClick={() => removeFromBasket(item.id)}
 								>
 									Remove from basket
 								</Button>

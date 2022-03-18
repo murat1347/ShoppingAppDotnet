@@ -39,6 +39,9 @@ function Signin({ history }) {
 				console.log(loginResponse);
 			} catch (e) {
 				bag.setErrors({ general: e.response.data.message });
+				console.log(bag.setErrors({ general: e.response.data.message }))
+				
+				
 			}
 		},
 	});
@@ -52,7 +55,9 @@ function Signin({ history }) {
 					</Box>
 					<Box my={5}>
 						{formik.errors.general && (
-							<Alert status="error">{formik.errors.general}</Alert>
+							<FormLabel>
+								 {formik.errors.general && <div> {formik.errors.general}</div>}
+							</FormLabel>
 						)}
 					</Box>
 					<Box my={5} textAlign="left">
@@ -64,8 +69,14 @@ function Signin({ history }) {
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 									value={formik.values.email}
-									isInvalid={formik.touched.email && formik.errors.email}
+									error={formik.touched.email && formik.errors.email}
 								/>
+								{formik.touched.email && formik.errors.email &&
+									<FormLabel>
+										{formik.touched.email && formik.errors.email}
+									</FormLabel>
+
+								}
 							</FormControl>
 
 							<FormControl mt="4">
@@ -76,8 +87,13 @@ function Signin({ history }) {
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 									value={formik.values.password}
-									isInvalid={formik.touched.password && formik.errors.password}
+									error={formik.touched.password && formik.errors.password}
 								/>
+								{formik.touched.password && formik.errors.password &&
+									<FormLabel>
+										{formik.touched.password && formik.errors.password}
+									</FormLabel>
+								}
 							</FormControl>
 							<Button mt="4" width="full" type="submit">
 								Signin

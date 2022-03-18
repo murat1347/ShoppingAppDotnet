@@ -8,7 +8,7 @@ function Card({ item }) {
 	const { addToBasket, items } = useBasket();
 
 	const findBasketItem = items.find(
-		(basket_item) => basket_item._id === item._id
+		(basket_item) => basket_item.id === item.id
 	);
 
 	return (
@@ -24,7 +24,7 @@ function Card({ item }) {
 					<Box mt="1" fontWeight="semibold" as="h4" lineHeight="tight">
 						{item.name}
 					</Box>
-					<Box>{item.price} TL</Box>
+					<Box>{item.price} ₺</Box>
 				</Box>
 			</Link>
 

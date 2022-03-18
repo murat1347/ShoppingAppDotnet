@@ -56,7 +56,7 @@ export const fetchLogin = async (input) => {
 
 export const fetchMe = async () => {
 	const { data } = await axios.get(
-		`http://localhost:4988/api/admin`
+		`http://localhost:4988/api/account`
 	);
 	return data;
 };

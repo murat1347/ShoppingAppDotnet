@@ -29,6 +29,7 @@ function Signup({ history }) {
 		  rePassword: '',
 		  userName: ''
 		},
+		validationSchema,
 		onSubmit: (values, bag) => {
 		  try {
 			fetchRegister({
@@ -39,6 +40,7 @@ function Signup({ history }) {
 			  rePassword : values.rePassword,
 			  userName :values.userName}
 			);
+			history.push("/profile");
 			console.log(values);
 		  }
 		  catch (e) {
@@ -107,10 +109,10 @@ function Signup({ history }) {
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 									value={formik.values.firstName}
-									// isInvalid={
-									// 	formik.touched.firstName &&
-									// 	formik.errors.firstName
-									// }
+									isInvalid={
+										formik.touched.firstName &&
+										formik.errors.firstName
+									}
 								/>
 							</FormControl>
 
@@ -122,10 +124,10 @@ function Signup({ history }) {
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 									value={formik.values.lastName}
-									// isInvalid={
-									// 	formik.touched.lastName &&
-									// 	formik.errors.lastName
-									// }
+									isInvalid={
+										formik.touched.lastName &&
+										formik.errors.lastName
+									}
 								/>
 							</FormControl>
 
@@ -137,10 +139,10 @@ function Signup({ history }) {
 									onChange={formik.handleChange}
 									onBlur={formik.handleBlur}
 									value={formik.values.userName}
-									// isInvalid={
-									// 	formik.touched.userName &&
-									// 	formik.errors.userName
-									// }
+									isInvalid={
+										formik.touched.userName &&
+										formik.errors.userName
+									}
 								/>
 							</FormControl>
 							<Button mt="4" width="full" type="submit">
