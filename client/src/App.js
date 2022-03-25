@@ -3,9 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
-
+import categoryList from "./pages/Category/categoryList";
 import ProtectedRoute from "./pages/ProtectedRoute";
-
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Signin from "./pages/Auth/Signin";
@@ -14,6 +13,7 @@ import Profile from "./pages/Profile";
 import Basket from "./pages/Basket";
 import Admin from "./pages/Admin";
 import Error404 from "./pages/Error404";
+
 
 function App() {
 	return (
@@ -24,6 +24,7 @@ function App() {
 				<div id="content">
 					<Switch>
 						<Route path="/" exact component={Products} />
+						<Route path="/category" component={categoryList} />
 						<Route path="/product/:product_id" component={ProductDetail} />
 						<Route path="/signin" component={Signin} />
 						<Route path="/signup" component={Signup} />

@@ -9,7 +9,7 @@ namespace HYS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+   
     public class AdminController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -19,6 +19,13 @@ namespace HYS.API.Controllers
         {
             _roleManager = roleManager;
             _userManager = userManager;
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult Index()
+        {
+            return Ok();
         }
 
         [HttpGet]

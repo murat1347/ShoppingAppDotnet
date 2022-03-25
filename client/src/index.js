@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import "./reset.css";
 import "antd/dist/antd.css";
-
+import {Provider} from "react-redux"
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-
+import configureStore from "./redux/configurestore";
 // contexts
 import { AuthProvider } from "./contexts/AuthContext";
 import { BasketProvider } from "./contexts/BasketContext";
@@ -14,7 +14,7 @@ import { BasketProvider } from "./contexts/BasketContext";
 import { ChakraProvider } from "@chakra-ui/react";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-
+const store = configureStore();
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {
@@ -29,7 +29,8 @@ ReactDOM.render(
 		<ChakraProvider>
 			<AuthProvider>
 				<BasketProvider>
-					<App />
+					<Provider store={store}>
+					<App /></Provider> 
 				</BasketProvider>
 			</AuthProvider>
 		</ChakraProvider>

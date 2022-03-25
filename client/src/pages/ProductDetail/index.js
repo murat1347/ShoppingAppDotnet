@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetchProduct } from "../../api";
-import { Box, Text, Button } from "@chakra-ui/react";
+import { Box, Text, Button, Image,Center} from "@chakra-ui/react";
 import moment from "moment";
 import ImageGallery from "react-image-gallery";
 import { useBasket } from "../../contexts/BasketContext";
@@ -22,29 +22,31 @@ function ProductDetail() {
 		return <div>Error.</div>;
 	}
 
-	const findBasketItem = items.find((item) => item._id === product_id);
-	// const images = data.photos.map((url) => ({ original: url }));
-
+	const findBasketItem = items.find((item) => item.id === product_id);
+	// const images = data.image((image) => ({ original: image }));
+	
 	return (
+		<Center>
 		<div>
+		
+		<Center>
+			<Text as="h1" fontSize="2xl">
+				{data.name}
+			</Text>
+			</Center>
+			<Box margin="10">
+				{/* <ImageGallery items={images} showThumbnails={false} /> */}
+				<Image src={data.image} alt="" />
+			</Box>
+			<p>{data.description}</p>	<Center>
 			<Button
 				colorScheme={findBasketItem ? "pink" : "green"}
 				onClick={() => addToBasket(data, findBasketItem)}
 			>
 				{findBasketItem ? "Remove from basket" : "Add to basket"}
-			</Button>
-
-			<Text as="h2" fontSize="2xl">
-				{data.title}
-			</Text>
-			<Text>{moment(data.createdAt).format("DD/MM/YYYY")}</Text>
-
-			<p>{data.description}</p>
-
-			<Box margin="10">
-				{/* <ImageGallery items={images} showThumbnails={false} /> */}
-			</Box>
-		</div>
+			</Button> 	</Center>
+			{/* <Text>{moment(data.createdAt).format("DD/MM/YYYY")}</Text> */}
+		</div></Center>
 	);
 }
 

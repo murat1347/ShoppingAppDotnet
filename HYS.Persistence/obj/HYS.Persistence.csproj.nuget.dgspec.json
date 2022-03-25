@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {}
+    "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
+    "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj",
         "projectName": "HYS.Domain",
-        "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj",
-        "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\obj\\",
+        "projectPath": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,21 +78,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {
+    "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
+        "projectUniqueName": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
         "projectName": "HYS.Persistence",
-        "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
-        "packagesPath": "C:\\Users\\kodplus.dev1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\obj\\",
+        "projectPath": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
+        "packagesPath": "C:\\Users\\asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kodplus.dev1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,8 +106,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
-                "projectPath": "C:\\Users\\kodplus.dev1\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj"
+              "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj": {
+                "projectPath": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Domain\\HYS.Domain.csproj"
               }
             }
           }
@@ -146,7 +146,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
