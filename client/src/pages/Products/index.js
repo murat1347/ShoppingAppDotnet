@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
-import { Grid, Box, Flex, Button } from "@chakra-ui/react";
+import React, { Component, useEffect, useState } from "react";
+import { ReactSearchAutocomplete } from 'react-search-autocomplete';
+import { Grid, Box, Flex, Button, Badge, Select } from "@chakra-ui/react";
 import { useInfiniteQuery } from "react-query";
 import { fetchProductList } from "../../api";
 import Card from "../../components/Card";
 import { useHistory } from "react-router-dom";
-import {CategoryList} from ".././Category/categoryList"
+import * as categoryActions from "../../redux/actions/categoryActions";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 function Products() {
-
-	// const currentCategory=()=>{
-	// 	this.setState({current : CategoryList});
-	// }
 	const [value, setValue] = useState('');
-	let history = useHistory();
+	const history = useHistory();
 	const [searchValue, setSearchValue] = useState('');
 	const {
 		data,
@@ -32,6 +30,13 @@ function Products() {
 			return allGroups.length + 1;
 		},
 	});
+
+
+
+
+	// const currentCategory=()=>{
+	// 	this.setState({current : CategoryList});
+	// }
 
 	if (status === "loading") return "Loading...";
 
@@ -84,8 +89,16 @@ function Products() {
 			</div>
 			<button type='submit'>Search</button>
 		</form>
-	
 
+		<h3>
+			<Badge color="warning">Products</Badge>
+			<Badge color="success">
+				<Select placeholder='Select option'>
+					<option value='1'> 1</option>
+					<option value='1'> 2</option>
+				</Select>
+			</Badge>
+		</h3>
 	</div><div mt="5">
 			<Grid templateColumns="repeat(3, 1fr)" gap={4}>
 				{data.pages.map((group, i) => (
@@ -116,6 +129,37 @@ function Products() {
 
 		</div></>
 	);
+
+}
+function mapStateToProps(state) {
+	return {
+		// currentCategory: state.changeCategoryReducer,
+		categories: state.categoryReducer
+	};
 }
 
-export default Products;
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: {
+			getCategories: bindActionCreators(
+				categoryActions.getCategories,
+				dispatch
+			),
+			//   changeCategory: bindActionCreators(
+			//     categoryActions.changeCategory,
+			//     dispatch
+			//   ),
+			//   getProducts: bindActionCreators(productActions.getProducts, dispatch)
+		}   // 
+	};
+}
+const selectCategory = category => {
+	this.props.actions.changeCategory(category);
+	this.props.actions.getProducts(category.id)
+};
+
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Products);

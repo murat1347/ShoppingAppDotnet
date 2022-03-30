@@ -11,9 +11,10 @@ namespace HYS.API.Controllers
     public class ProductController : ControllerBase
     {
         private readonly IGenericService<Product> _productGenericService;
-
-        public ProductController(IGenericService<Product> productGenericService)
+        private readonly ICategoryService _categoryService;
+        public ProductController(IGenericService<Product> productGenericService, ICategoryService categoryService)
         {
+            _categoryService = categoryService;
             _productGenericService = productGenericService;
         }
 
@@ -52,5 +53,15 @@ namespace HYS.API.Controllers
             _productGenericService.Delete(id);
             return Ok();
         }
+
+        [HttpGet("category/{id}")]
+        public ActionResult GetProductByCategoryId(int id)
+
+        {
+            var values = _categoryService.GetPostsByCategory(id);
+            return Ok(values);
+
+        }
+
     }
 }

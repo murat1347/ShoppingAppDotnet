@@ -1,3 +1,5 @@
 export default {
-    categoryReducer:[]
+    categoryReducer:[],
+    changeCategoryReducer:[],
+    currentCategory:{},
 }

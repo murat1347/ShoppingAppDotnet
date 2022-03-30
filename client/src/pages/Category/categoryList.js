@@ -6,7 +6,8 @@ import * as categoryActions from "../../redux/actions/categoryActions";
 import { ListGroup, ListGroupItem } from "reactstrap";
 // import { Badge } from "reactstrap";
 //import * as productActions from "../../redux/actions/productActions";
-import { Badge,Text } from '@chakra-ui/react'
+import { Badge,Text,Link } from '@chakra-ui/react'
+import Brands from "../Products/Brands";
 class CategoryList extends Component {
   componentDidMount() {
     this.props.actions.getCategories();
@@ -16,16 +17,16 @@ class CategoryList extends Component {
     this.props.actions.changeCategory(category);
     this.props.actions.getProducts(category.id)
   };
-  componentDidMount() {
-    const token = localStorage.token
-    if(token){
-      const decoded = jwt_decode(token)
-      console.log(decoded)
-    this.setState(decoded)
-    }else{
-      this.props.history.push('/Login')
-    }
-  }
+  // componentDidMount() {
+  //   const token = localStorage.token
+  //   if(token){
+  //     const decoded = jwt_decode(token)
+  //     console.log(decoded)
+  //   this.setState(decoded)
+  //   }else{
+  //     this.props.history.push('/Login')
+  //   }
+  // }
   render() {
     return (
       <div>
@@ -35,10 +36,10 @@ class CategoryList extends Component {
         {this.props.categories?.map(category => (
          
           <Badge ml='1' fontSize='2em' colorScheme='green'>
-          {category.name}<br/>
+         <Link href="/category">{category.name}</Link><br/>
           </Badge>
        ))}
-
+<Brands></Brands>
         {/* <ListGroup>
           {this.props.categories.map(category => (
             <ListGroupItem

@@ -13,3 +13,6 @@ export function getCategories() {
       .then(result => dispatch(getCategoriesSuccess(result)));
   };
 }
+export function changeCategory(category) {
+  return { type: actionTypes.CHANGE_CATEGORY, payload: category };
+}

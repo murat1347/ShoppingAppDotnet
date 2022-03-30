@@ -25,8 +25,13 @@ namespace HYS.Persistence.Repositories.Concrete
         {
             var p = new DynamicParameters();
             p.Add("Id", id);
-            var blogPosts = _dbConnection.Query<Product>("GetPostsByCategory", p, commandType: CommandType.StoredProcedure).ToList();
-            return blogPosts;
+
+            string sql = "select * from dbo.Products where categoryId ="+id;  // Code in another language, stored in a string!
+            
+            var values =  _dbConnection.Query<Product>(sql);
+
+
+            return values.ToList();
         }
     }
 }

@@ -19,7 +19,6 @@ namespace HYS.API.Controllers
     {
         private UserManager<User> _userManager;
         private SignInManager<User> _signInManager;
-
         private JwtTokenGenerator _generator;
 
         //private IEmailSender _emailSender;
@@ -79,7 +78,7 @@ namespace HYS.API.Controllers
 
         }
 
-
+        
 
     }
 }
