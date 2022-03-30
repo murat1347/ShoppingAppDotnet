@@ -1,14 +1,19 @@
 import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
-import { Button } from "@chakra-ui/react";
-
+import { Button,Input ,List } from "@chakra-ui/react";
+import { useState } from "react";
 import { useAuth } from "../../contexts/AuthContext";
 import { useBasket } from "../../contexts/BasketContext";
 
 function Navbar() {
 	const { loggedIn, user } = useAuth();
 	const { items } = useBasket();
-
+	const [inputText, setInputText] = useState("");
+	let inputHandler = (e) => {
+	  //convert input text to lower case
+	  var lowerCase = e.target.value.toLowerCase();
+	  setInputText(lowerCase);
+	};
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.left}>
@@ -22,7 +27,7 @@ function Navbar() {
 					</li>
 				</ul>
 			</div>
-
+			
 			<div className={styles.right}>
 				{!loggedIn && (
 					<>

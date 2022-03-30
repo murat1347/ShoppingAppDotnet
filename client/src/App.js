@@ -13,6 +13,8 @@ import Profile from "./pages/Profile";
 import Basket from "./pages/Basket";
 import Admin from "./pages/Admin";
 import Error404 from "./pages/Error404";
+import search from "./pages/Products/search";
+import Search from "./pages/Products/search";
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
 						<Route path="/signin" component={Signin} />
 						<Route path="/signup" component={Signup} />
 						<Route path="/basket" component={Basket} />
+						<Route path="/search" component={Search} />
 						<ProtectedRoute path="/profile" component={Profile} />
 						<ProtectedRoute path="/admin" component={Admin} admin={true} />
 						<Route path="*" component={Error404} />
