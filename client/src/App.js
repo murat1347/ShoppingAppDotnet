@@ -2,10 +2,8 @@ import "./App.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import categoryList from "./pages/Category/categoryList";
+import Navbar from "./components/Navbar/index";
 import ProtectedRoute from "./pages/ProtectedRoute";
-import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Signin from "./pages/Auth/Signin";
 import Signup from "./pages/Auth/Signup";
@@ -13,9 +11,9 @@ import Profile from "./pages/Profile";
 import Basket from "./pages/Basket";
 import Admin from "./pages/Admin";
 import Error404 from "./pages/Error404";
-import search from "./pages/Products/search";
 import Search from "./pages/Products/search";
-
+import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -25,18 +23,18 @@ function App() {
 
 				<div id="content">
 					<Switch>
-						<Route path="/" exact component={Products} />
-						<Route path="/category" component={categoryList} />
+						<Route path="/" exact component={Home} />
+					
 						<Route path="/product/:product_id" component={ProductDetail} />
 						<Route path="/signin" component={Signin} />
 						<Route path="/signup" component={Signup} />
 						<Route path="/basket" component={Basket} />
-						<Route path="/search" component={Search} />
 						<ProtectedRoute path="/profile" component={Profile} />
 						<ProtectedRoute path="/admin" component={Admin} admin={true} />
 						<Route path="*" component={Error404} />
 					</Switch>
 				</div>
+				<Footer/>
 			</div>
 		</Router>
 	);

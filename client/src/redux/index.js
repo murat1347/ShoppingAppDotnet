@@ -1,13 +1,13 @@
 import {combineReducers} from "redux"
-import categoryReducer from "../redux/reducers/categoryReducer"
-import changeCategoryReducer from "./reducers/changeCategoryReducer";
-import { brandsReducer } from "./reducers/brandReducer";
-import { phonesReducer } from "./reducers/phonesReducer";
+import {categoriesReducer} from "./reducers/categoriesReducer"
+import {productReducer} from "./reducers/productReducer"
+import {priceFilterReducer} from "./reducers/priceFilterReducer"
+import {categoryFilterReducer} from "./reducers/categoryFilterReducer"
 const rootReducer = combineReducers({
-    categoryReducer,
-    changeCategoryReducer,
-    brandsReducer,
-    phonesReducer
+    product:productReducer,
+    priceFilter: priceFilterReducer,
+    category:categoriesReducer,
+    filteredCategory: categoryFilterReducer,
 })
 
 export default rootReducer;

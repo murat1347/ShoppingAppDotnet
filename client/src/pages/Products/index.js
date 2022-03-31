@@ -8,6 +8,7 @@ import { useHistory } from "react-router-dom";
 import * as categoryActions from "../../redux/actions/categoryActions";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import LeftSide from "../../components/LeftSide";
 function Products() {
 	const [value, setValue] = useState('');
 	const history = useHistory();
@@ -89,7 +90,7 @@ function Products() {
 			</div>
 			<button type='submit'>Search</button>
 		</form>
-
+		<LeftSide />
 		<h3>
 			<Badge color="warning">Products</Badge>
 			<Badge color="success">
