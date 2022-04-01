@@ -1,0 +1,231 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+  <button class="mb-3" mat-raised-button color="primary"  (click)="refresh()">Reflesh</button>
+</div>
+<div class="position-absolute top-50 start-50" *ngIf="isLoadingResult">
+  <mat-spinner></mat-spinner>
+</div>
+
+<!-- Content Row -->
+<div class="row justify-content-center" *ngIf="!isLoadingResult">
+
+  <!-- Earnings (Monthly) Card Example -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+              Total Purchases' Cost</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ dashboard.totalCost |  currency }}</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Earnings (Monthly) Card Example -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+              Total Sale Income</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ dashboard.totalIncome |  currency }}</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Earnings (Monthly) Card Example -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+              Total Profit</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ (dashboard.totalIncome! - dashboard.totalCost!) |  currency }}</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Earnings (Monthly) Card Example -->
+  <div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-success shadow h-100 py-2 bg-info">
+      <div class="card-body">
+        <div class="row no-gutters align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-light text-uppercase mb-1">
+              Total Products</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ (dashboard.criticalStock | number)  }}</div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Content Row -->
+
+<div class="row">
+
+  <!-- Area Chart -->
+  <div class="col-xl-6 col-lg-6">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div
+        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Most Purchased</h6>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="chart-area">
+          <ngx-charts-bar-horizontal
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="purchaseSummaryChartData"
+            [gradient]="false"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [xAxisLabel]="'Purchase'"
+            [yAxisLabel]="'Product'"
+            >
+          </ngx-charts-bar-horizontal>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie Chart -->
+  <div class="col-xl-6 col-lg-6">
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div
+        class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h6 class="m-0 font-weight-bold text-primary">Most Sold</h6>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <ngx-charts-bar-horizontal
+          [view]="view"
+          [scheme]="colorScheme"
+          [results]="saleSummaryChartData"
+          [gradient]="false"
+          [xAxis]="true"
+          [yAxis]="true"
+          [legend]="true"
+          [showXAxisLabel]="true"
+          [showYAxisLabel]="true"
+          [xAxisLabel]="'Sale'"
+          [yAxisLabel]="'Product'"
+        >
+        </ngx-charts-bar-horizontal>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row">
+
+    <!-- Area Chart -->
+    <div class="col-xl-6 col-lg-6">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div
+          class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Most Profit</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <div class="chart-area">
+            <ngx-charts-bar-vertical
+              [view]="view"
+              [scheme]="colorScheme"
+              [results]="mostProfitChartData"
+              [gradient]="false"
+              [xAxis]="true"
+              [yAxis]="true"
+              [legend]="true"
+              [showXAxisLabel]="true"
+              [showYAxisLabel]="true"
+              [xAxisLabel]="'Profit'"
+              [yAxisLabel]="'Product'"
+            >
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="col-xl-6 col-lg-6">
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div
+          class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">Most Loss</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="mostLossChartData"
+            [gradient]="false"
+            [xAxis]="true"
+            [yAxis]="true"
+            [legend]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [xAxisLabel]="'Loss'"
+            [yAxisLabel]="'Product'"
+          >
+          </ngx-charts-bar-vertical>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <!-- Area Chart -->
+    <div class="col-xl-12 col-lg-12">
+      <div class="card shadow mb-12 pie-chart-monthly-incomes" >
+        <!-- Card Header - Dropdown -->
+        <ngx-charts-pie-chart
+          [scheme]="colorScheme"
+          [results]="monthlyIncomes"
+          [explodeSlices]="false"
+          [labels]="true"
+          [legend]="true"
+          [doughnut]="false"
+          [gradient]="true"
+         >
+        </ngx-charts-pie-chart>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

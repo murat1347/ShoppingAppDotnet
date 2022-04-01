@@ -1,0 +1,62 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">{{!categoryId? "New Category" : "Update Category"}}</h1>
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="errors != null">
+  Please fix this errors in order to complete your request.
+  <div  role="alert" *ngFor="let item of this.errors">
+    {{item.name}}:
+    <div role="alert" class="ms-4" *ngFor="let err of item.errors">
+      {{err}}
+    </div>
+  </div>
+</div>
+
+<form [formGroup]="categoryForm" class="example-form">
+
+  <mat-form-field class="example-full-width w-25">
+    <mat-label>Category Name</mat-label>
+    <input matInput formControlName="name" class="d-flex">
+  </mat-form-field>
+
+  <div *ngIf="categoryForm.controls.name.invalid && (categoryForm.controls.name.dirty || categoryForm.controls.name.touched)"
+       class="alert d-inline-block">
+    <div *ngIf="categoryForm.controls.name.errors?.required">
+      Name is required.
+    </div>
+    <div *ngIf="categoryForm.controls.name.errors?.minlength">
+      Name must be at least {{ Category.NameMinLength  }} characters long.
+    </div>
+    <div *ngIf="categoryForm.controls.name.errors?.maxlength">
+      Name must be at most {{ Category.NameMaxLength  }} characters long.
+    </div>
+  </div>
+  <br/>
+  <mat-form-field class="example-full-width w-25">
+    <mat-label>Parent Category</mat-label>
+    <input type="text"
+           placeholder="Parent"
+           aria-label="Number"
+           matInput
+           formControlName="parent"
+           [matAutocomplete]="auto"
+           class="d-flex"
+    >
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option.name ">
+        {{option.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <div *ngIf="categoryForm.controls.parent.invalid && (categoryForm.controls.parent.dirty || categoryForm.controls.parent.touched)"
+       class="alert d-inline-block">
+    <div *ngIf="categoryForm.controls.parent.errors?.parentDoesNotExist">
+      This category doesn't exist.
+    </div>
+  </div>
+
+  <button [disabled]="!categoryForm.valid" type="submit" class="mt-3 align-self-end d-flex" mat-raised-button
+          color="primary" (click)="save()">Save
+  </button>
+</form>

@@ -1,0 +1,32 @@
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+  <h1 class="h3 mb-0 text-gray-800">Categories</h1>
+</div>
+
+<div class="w-50 justify-content-center" *ngIf="dataSource.data.length > 0">
+<mat-card class="mt-5">
+  <mat-card-content >
+
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
+      <mat-tree-node *matTreeNodeDef="let category" matTreeNodeToggle matTreeNodePadding>
+        <button mat-icon-button disabled></button>
+        <a [routerLink]="['/'+ RouteValues.Category.Edit, category.id]" routerLinkActive="active"> {{category.item}} </a>
+        <button mat-icon-button (click)="delete(category)"><mat-icon>delete</mat-icon></button>
+      </mat-tree-node>
+
+      <mat-tree-node *matTreeNodeDef="let category; when: hasChild" matTreeNodePadding>
+        <button mat-icon-button matTreeNodeToggle
+                [attr.aria-label]="'Toggle ' + category.item">
+          <mat-icon class="mat-icon-rtl-mirror">
+            {{treeControl.isExpanded(category) ? 'expand_more' : 'chevron_right'}}
+          </mat-icon>
+        </button>
+        <a [routerLink]="['/'+ RouteValues.Category.Edit, category.id]" routerLinkActive="active"> {{category.item}} </a>
+      </mat-tree-node>
+    </mat-tree>
+
+  </mat-card-content>
+</mat-card>
+</div>
+<button class="mt-3 align-self-end" mat-raised-button color="primary" routerLink="/category/new">New Category</button>
+

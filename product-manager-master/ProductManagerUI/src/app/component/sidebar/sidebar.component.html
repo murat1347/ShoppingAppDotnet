@@ -1,0 +1,77 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar" *ngIf="authenticationService.currentUserValue">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <div class="sidebar-brand-icon rotate-n-15">
+      <i class="fas fa-laugh-wink"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">Product Manager</div>
+  </a>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item active">
+    <a routerLink="/home" routerLinkActive="is-active" class="nav-link">
+      <span>Dashboard</span></a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Store
+  </div>
+
+  <li class="nav-item">
+    <a [routerLink]="RouteValues.Category.Root" class="nav-link"  routerLinkActive="is-active">
+      Categories
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a [routerLink]="RouteValues.Product.Root" routerLinkActive="is-active" class="nav-link " >
+      <span>Products</span>
+    </a>
+  </li>
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Relationship
+  </div>
+
+  <li class="nav-item">
+    <a [routerLink]="RouteValues.Customer.Root" class="nav-link " >
+      <span>Customer</span>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a [routerLink]="RouteValues.Seller.Root" class="nav-link ">
+      <span>Seller</span>
+    </a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    Operations
+  </div>
+
+  <li class="nav-item">
+    <a [routerLink]="RouteValues.Purchase.Root" class="nav-link ">
+      <span>Purchase</span>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a [routerLink]="RouteValues.Sale.Root" class="nav-link" >
+      <span>Sale</span>
+    </a>
+  </li>
+
+</ul>

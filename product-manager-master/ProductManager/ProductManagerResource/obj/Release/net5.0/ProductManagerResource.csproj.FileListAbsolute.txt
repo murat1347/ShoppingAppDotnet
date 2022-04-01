@@ -1,0 +1,14 @@
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\bin\Release\net5.0\ProductManagerResource.deps.json
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\bin\Release\net5.0\ProductManagerResource.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\bin\Release\net5.0\ref\ProductManagerResource.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\bin\Release\net5.0\ProductManagerResource.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.csproj.AssemblyReference.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.Resource.ValidationResource.resources
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.csproj.GenerateResource.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.AssemblyInfoInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.AssemblyInfo.cs
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.csproj.CoreCompileInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ref\ProductManagerResource.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerResource\obj\Release\net5.0\ProductManagerResource.pdb

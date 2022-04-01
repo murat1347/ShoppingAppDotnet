@@ -1,0 +1,15 @@
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\bin\Release\net5.0\ProductManagerPersistance.deps.json
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\bin\Release\net5.0\ProductManagerPersistance.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\bin\Release\net5.0\ref\ProductManagerPersistance.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\bin\Release\net5.0\ProductManagerPersistance.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\bin\Release\net5.0\ProductManagerModel.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\bin\Release\net5.0\ProductManagerModel.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.csproj.AssemblyReference.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.AssemblyInfoInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.AssemblyInfo.cs
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.csproj.CoreCompileInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.csproj.CopyComplete
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ref\ProductManagerPersistance.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerPersistance\obj\Release\net5.0\ProductManagerPersistance.pdb

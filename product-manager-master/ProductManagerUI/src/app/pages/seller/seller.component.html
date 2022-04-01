@@ -1,0 +1,142 @@
+<button [routerLink]="'/' + RouteValues.Seller.New" class="mb-3 align-self-end" mat-raised-button color="primary" >New Seller</button>
+
+<div class="example-container mat-elevation-z8">
+
+  <div class="example-loading-shade">
+    <mat-progress-bar [mode]="isLoadingResults? 'indeterminate' : 'determinate'" value="100"></mat-progress-bar>
+  </div>
+
+  <div class="example-table-container" >
+
+    <mat-paginator [length]="resultsLength" [pageSizeOptions]="[5, 10, 25, 50]" ></mat-paginator>
+
+    <table mat-table [dataSource]="data" class="example-table"
+           matSort matSortActive="id" matSortDisableClear matSortDirection="asc">
+      <!-- Number Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Id
+        </th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="id-filter">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field >
+            <mat-label>Id filter</mat-label>
+            <input [formControl]="formControls.id" matInput class="d-flex">
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear >
+          First name
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <a href="{{row.id}}">{{row.firstName}}</a>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="firstName-filter">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field >
+            <mat-label>First name filter</mat-label>
+            <input [formControl]="formControls.firstName" matInput class="d-flex" >
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Last Name
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <a href="{{row.id}}">{{row.lastName}}</a>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastName-filter">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field >
+            <mat-label>Last name filter</mat-label>
+            <input [formControl]="formControls.lastName" matInput class="d-flex" >
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <!-- Created Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Email
+        </th>
+        <td mat-cell *matCellDef="let row"><a >{{row.email}}</a></td>
+      </ng-container>
+
+      <ng-container matColumnDef="email-filter">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field >
+            <mat-label>Email filter</mat-label>
+            <input [formControl]="formControls.email" matInput class="d-flex" >
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <!-- Created Column -->
+      <ng-container matColumnDef="phone">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Phone
+        </th>
+        <td mat-cell *matCellDef="let row"><a >{{row.phone}}</a></td>
+      </ng-container>
+
+      <ng-container matColumnDef="phone-filter">
+        <th mat-header-cell *matHeaderCellDef>
+          <mat-form-field >
+            <mat-label>Phone filter</mat-label>
+            <input [formControl]="formControls.phone" matInput class="d-flex" >
+          </mat-form-field>
+        </th>
+      </ng-container>
+
+      <!-- Created Column -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef  disableClear>
+          Address
+        </th>
+        <td mat-cell *matCellDef="let row"><a >{{row.address | truncatePipe:[45, '...'] }}</a></td>
+      </ng-container>
+
+      <ng-container matColumnDef="address-filter">
+        <th mat-header-cell *matHeaderCellDef>
+        </th>
+      </ng-container>
+
+      <ng-container matColumnDef="delete">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Delete
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <button (click)="delete(row.id)" class=" align-self-end bg-danger" mat-raised-button color="primary" >
+            <mat-icon aria-hidden="false" aria-label="Example home icon">delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="edit">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear>
+          Delete
+        </th>
+        <td mat-cell *matCellDef="let row">
+          <a routerLink="{{'/' + RouteValues.Seller.Edit + '/' + row.id}}" class=" bg-white" mat-raised-button color="primary" >
+            <mat-icon color="primary" aria-hidden="false" aria-label="Example home icon ">edit</mat-icon>
+          </a>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-header-row *matHeaderRowDef="displayedColumnFilters"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

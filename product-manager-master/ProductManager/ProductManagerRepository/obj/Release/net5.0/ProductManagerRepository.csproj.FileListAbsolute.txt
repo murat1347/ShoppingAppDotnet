@@ -1,0 +1,17 @@
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.csproj.AssemblyReference.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.AssemblyInfoInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.AssemblyInfo.cs
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.csproj.CoreCompileInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerRepository.deps.json
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerRepository.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ref\ProductManagerRepository.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerRepository.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerModel.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerPersistance.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerModel.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\bin\Release\net5.0\ProductManagerPersistance.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.csproj.CopyComplete
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ref\ProductManagerRepository.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerRepository\obj\Release\net5.0\ProductManagerRepository.pdb
