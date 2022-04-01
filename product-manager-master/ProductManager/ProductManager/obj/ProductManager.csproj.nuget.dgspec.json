@@ -1,0 +1,508 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManager\\ProductManager.csproj": {}
+  },
+  "projects": {
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj",
+        "projectName": "ProductManagerDTO",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerHelper\\ProductManagerCrossCuttings.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerHelper\\ProductManagerCrossCuttings.csproj",
+        "projectName": "ProductManagerCrossCuttings",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerHelper\\ProductManagerCrossCuttings.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerHelper\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj",
+        "projectName": "ProductManagerDomain",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj",
+        "projectName": "ProductManagerPersistance",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj",
+        "projectName": "ProductManagerRepository",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerServiceLayer\\ProductManagerServiceLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerServiceLayer\\ProductManagerServiceLayer.csproj",
+        "projectName": "ProductManagerServiceLayer",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerServiceLayer\\ProductManagerServiceLayer.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerServiceLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManager\\ProductManager.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManager\\ProductManager.csproj",
+        "projectName": "ProductManager",
+        "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManager\\ProductManager.csproj",
+        "packagesPath": "C:\\Users\\dogukan\\.nuget\\packages\\",
+        "outputPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManager\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\dogukan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerDTO\\ProductManagerDTO.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerHelper\\ProductManagerCrossCuttings.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerHelper\\ProductManagerCrossCuttings.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerModel\\ProductManagerDomain.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerPersistance\\ProductManagerPersistance.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerRepository\\ProductManagerRepository.csproj"
+              },
+              "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerServiceLayer\\ProductManagerServiceLayer.csproj": {
+                "projectPath": "D:\\projects\\kocsistem\\m1_ProductManager\\v1\\ProductManager\\ProductManagerServiceLayer\\ProductManagerServiceLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Faker.NETCore": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

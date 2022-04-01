@@ -1,0 +1,12 @@
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\bin\Debug\net5.0\ProductManagerHelper.deps.json
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\bin\Debug\net5.0\ProductManagerHelper.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\bin\Debug\net5.0\ref\ProductManagerHelper.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\bin\Debug\net5.0\ProductManagerHelper.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.AssemblyInfoInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.AssemblyInfo.cs
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.csproj.CoreCompileInputs.cache
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ref\ProductManagerHelper.dll
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.pdb
+D:\projects\kocsistem\m1_ProductManager\v1\ProductManager\ProductManagerHelper\obj\Debug\net5.0\ProductManagerHelper.csproj.AssemblyReference.cache
