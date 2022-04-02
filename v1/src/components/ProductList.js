@@ -16,9 +16,9 @@ const ProductList = () => {
   let phones;
 
   if (filteredCategory.filteredCategory.length > 0) {
-    phones = productsState.products.filter((phone) => {
+    phones = productsState.products.products.filter((phone) => {
      
-      if (filteredCategory.filteredCategory.includes(phone.categoryId.toString())) {
+      if (filteredCategory.filteredCategory.includes(phone.id.toString())) {
         return true;
       }
     });
@@ -47,15 +47,15 @@ const ProductList = () => {
 
   
   let pageNumberArray = [];
-  for (let i = 0; i < pageCount; i++) {
-    pageNumberArray[i] = (
-      <li className={currentPage == i + 1 ? "page-item active" : "page-item"}>
-        <button className="page-link" onClick={() => setCurrentPage(i + 1)}>
-          {i + 1}
-        </button>
-      </li>
-    );
-  }
+  // for (let i = 0; i < pageCount; i++) {
+  //   pageNumberArray[i] = (
+  //     <li className={currentPage == i + 1 ? "page-item active" : "page-item"}>
+  //       <button className="page-link" onClick={() => setCurrentPage(i + 1)}>
+  //         {i + 1}
+  //       </button>
+  //     </li>
+  //   );
+  // }
   return (
     <div style={{ width: "75%" }}>
      
