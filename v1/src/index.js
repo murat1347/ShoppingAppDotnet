@@ -1,19 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import { applyMiddleware, createStore } from 'redux';
 import "./reset.css";
 import "antd/dist/antd.css";
 import {Provider} from "react-redux"
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import configureStore from "./redux/configurestore";
+import thunk from "redux-thunk";
+import rootReducer from "./redux/store"
 // contexts
 import { AuthProvider } from "./contexts/AuthContext";
 import { BasketProvider } from "./contexts/BasketContext";
 import { ChakraProvider } from "@chakra-ui/react";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-const store = configureStore();
+const store = createStore(rootReducer, applyMiddleware(thunk));
+
 const queryClient = new QueryClient({
 	defaultOptions: {
 		queries: {

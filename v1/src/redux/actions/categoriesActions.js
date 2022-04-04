@@ -9,10 +9,7 @@ import axios from "axios";
 export const getCategory = (dispatch) => {
   dispatch({ type: CATEGORY_FETCH_START });
   axios
-    .get(categoriesURL,null,{params:{
-      version:1
-      
-    }})
+    .get(categoriesURL)
     .then((res) => dispatch({ type: CATEGORY_FETCH_SUCCESS, payload: res.data }))
     .catch((err) => dispatch({ type: CATEGORY_FETCH_FAIL, payload: err }));
 };

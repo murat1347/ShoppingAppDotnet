@@ -17,7 +17,7 @@ const Phone = ({ phone }) => {
         onMouseLeave={() => setIsHover(false)}
       >
         <Link to={{ pathname: `/`, phone: phone }}>
-        <Image src={phone.image} alt="product" loading="lazy" />
+        <Image src={phone.imageUrl} alt="product" loading="lazy" />
         </Link>
         <div className="card-body">
           <Link

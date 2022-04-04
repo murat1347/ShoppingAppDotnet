@@ -36,7 +36,7 @@ function ProductDetail() {
 			</Center>
 			<Box margin="10">
 				{/* <ImageGallery items={images} showThumbnails={false} /> */}
-				<Image src={data.image} alt="" />
+				<Image src={data.imageUrl} alt="" />
 			</Box>
 			<p>{data.description}</p>	<Center>
 			<Button
