@@ -1,4 +1,5 @@
-﻿using HYS.Application.Services.Interfaces;
+﻿using HYS.API.Dtos;
+using HYS.Application.Services.Interfaces;
 using HYS.Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -12,6 +13,7 @@ namespace HYS.API.Controllers
     {
         private readonly IGenericService<Product> _productGenericService;
         private readonly ICategoryService _categoryService;
+        private readonly IProductService _productService;
         public ProductController(IGenericService<Product> productGenericService, ICategoryService categoryService)
         {
             _categoryService = categoryService;
@@ -19,9 +21,10 @@ namespace HYS.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index([FromQuery] string search, int? CategoryId, string sortBy, int page, int PAGE_SIZE=10)
         {
-            return Ok(_productGenericService.GetAll());
+            // return Ok(_productGenericService.GetAll());
+            return Ok(_productGenericService.GetAll( search,CategoryId,sortBy,page,PAGE_SIZE));
         }
         [HttpGet("{id}")]
         public IActionResult Get(int id)
@@ -32,6 +35,7 @@ namespace HYS.API.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
+        [Authorize(AuthenticationSchemes = "Bearer")]
         public IActionResult Post(Product product)
         {
             _productGenericService.Insert(product);

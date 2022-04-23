@@ -7,8 +7,7 @@ using HYS.Domain.Entities;
 
 namespace HYS.Application.Services.Interfaces
 {
-    public interface IProductService:IGenericService<Product>
+    public interface IProductService : IGenericService<Product>
     {
-
     }
 }

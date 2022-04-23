@@ -141,7 +141,6 @@ C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.Generate
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.AssemblyInfoInputs.cache
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.AssemblyInfo.cs
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.csproj.CoreCompileInputs.cache
-C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\scopedcss\bundle\HYS.API.styles.css
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\staticwebassets\HYS.API.StaticWebAssets.Manifest.cache
@@ -152,3 +151,5 @@ C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\refint\HYS.API.d
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.pdb
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.genruntimeconfig.cache
 C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\ref\HYS.API.dll
+C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\asus\source\repos\Kodplus.HYS\HYS.API\obj\Debug\net5.0\HYS.API.MvcApplicationPartsAssemblyInfo.cs

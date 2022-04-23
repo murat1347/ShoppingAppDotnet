@@ -1,15 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "MbIywDe9hB4SfwhBd87QFSCdedCazTDKFBj+dJTylc9Wer3KB/V6r20iTYDLJFXjdH15sjBSeHlDObRqaHtCuw==",
+  "dgSpecHash": "muWtcT11uXGlPNemt0dIw0roHoQmvkG+32rBw72q48SGIwFOuTpdndqqnfDoW/xQII3pwTVRS85Lfaw3o75G6w==",
   "success": true,
   "projectFilePath": "C:\\Users\\asus\\source\\repos\\Kodplus.HYS\\HYS.Persistence\\HYS.Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\asus\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\dapper.contrib\\2.0.78\\dapper.contrib.2.0.78.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.14\\microsoft.aspnetcore.cryptography.internal.5.0.14.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.14\\microsoft.aspnetcore.cryptography.keyderivation.5.0.14.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.14\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.14.nupkg.sha512",
-    "C:\\Users\\asus\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\asus\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
     "C:\\Users\\asus\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.14\\microsoft.entityframeworkcore.5.0.14.nupkg.sha512",

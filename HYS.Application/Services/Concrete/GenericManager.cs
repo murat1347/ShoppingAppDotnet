@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HYS.Application.Services.Interfaces;
+using HYS.Domain.Entities;
+using HYS.Domain.Params;
 using HYS.Persistence.Repositories.Interfaces;
 
 namespace HYS.Application.Services.Concrete
@@ -17,9 +19,9 @@ namespace HYS.Application.Services.Concrete
         {
             _genericService = genericService;
         }
-        public List<TEntity> GetAll()
+        public List<Product> GetAll(string search, int? CategoryId, string sortBy, int page, int PAGE_SIZE)
         {
-           return _genericService.GetAll().ToList();
+           return _genericService.GetAll(search,CategoryId,  sortBy, page,PAGE_SIZE  );
         }
 
         public TEntity GetById(int id)
@@ -47,5 +49,10 @@ namespace HYS.Application.Services.Concrete
             var values = _genericService.GetById(id);
             _genericService.Delete(values);
         }
+
+        //public async Task<dynamic> Pagging(ProductRequestParams requestParams)
+        //{
+        //    return await _genericService.Pagging(requestParams);
+        //}
     }
 }

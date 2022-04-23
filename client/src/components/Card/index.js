@@ -14,7 +14,7 @@ function Card({ item }) {
 	return (
 		<Box borderWidth="1px" borderRadius="lg" overflow="hidden" p="3">
 			<Link to={`/product/${item.id}`}>
-				<Image src={item.image} alt="product" loading="lazy" />
+				<Image src={item.imageUrl} alt="product" loading="lazy" />
 
 				<Box p="6">
 					{/* <Box d="plex" alignItems="baseline">
