@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addProductAsync } from "../redux/addProductService";
+import { addProductAsync } from "../redux/Product/addProductService";
 import { Button, Input, Stack, Box, Flex,Center } from "@chakra-ui/react";
 import Error from "./Error";
 import Loading from "./Loading";

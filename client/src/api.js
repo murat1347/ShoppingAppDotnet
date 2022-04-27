@@ -30,7 +30,7 @@ export const fetchProductList = async () => {
 
 export const fetchProduct = async (id) => {
 	const { data } = await axios.get(
-		`https://localhost:5001/api/v1/Product/${id}`,{params:{version:1,id:id}}
+		`http://localhost:4988/api/Product/${id}`,{params:{id:id}}
 	);
 
 	return data;

@@ -4,53 +4,26 @@ import { getProducts } from "../redux/actions/productActions";
 import { Grid, Box } from "@chakra-ui/react";
 import Card from "./Card";
 import { GetBrands } from "../redux/actions/categoryFilterActions";
-
+import productListSlice from "../redux/Product/productListSlice";
+import { productListAsync } from "../redux/Product/ProductListService";
+import CategorySlice from "../redux/Category/CategorySlice";
 
 const ProductList = () => {
-  
-  //const productsState = useSelector((state) => state.product);
-  const productsState = useSelector((state) => state.filteredCategory);
+  const state = useSelector((state) => state);
+  const productsState = useSelector((state) => state.productListSlice);
   const filteredCategory = useSelector((state) => state.filteredCategory);
   const priceFilter = useSelector((state) => state.priceFilter);
+  const productListSlice = useSelector((state) => state.productListSlice)
   const dispatch = useDispatch();
   const [columnCount, setColumnCount] = useState(3);
+
   const layoutClassName = `row row-cols-${columnCount}`;
-  let phones;
-
-  if (filteredCategory.filteredCategory.length > 0) {
-   
-    phones = productsState.filteredCategory.products.filter((phone) => {
-    
-      if (filteredCategory.filteredCategory.includes(phone.id.toString())) {
-        return true;
-      }
-    });
-  } else {
-  
-   
-    phones = productsState.filteredCategory.products;
-  }
-  if (priceFilter.priceFilter == "low") {
-    phones = phones.sort((a, b) => (a.price > b.price ? 1 : -1));
-  } else if (priceFilter.priceFilter == "high") {
-    phones = phones.sort((a, b) => (b.price > a.price ? 1 : -1));
-  }
-  const color = { color: "#1E90FF" };
-  useEffect(() => {
-    dispatch(GetBrands(currentPage));
-
-    
-  }, [GetBrands]);
   const [currentPage, setCurrentPage] = useState(1);
   const phonesPerPage = 20;
   const indexOfLastPhone = currentPage * phonesPerPage;
-  phones = productsState.filteredCategory;
   const indexOfFirstPhone = indexOfLastPhone - phonesPerPage;
   //const currentPhones = phones.slice(indexOfFirstPhone, indexOfLastPhone);
-   const pageCount = Math.ceil(phones.length / phonesPerPage);
-
-  //I must do something like splice
-
+  const pageCount = Math.ceil(productListSlice.length / phonesPerPage);
   
   let pageNumberArray = [];
   for (let i = 0; i < pageCount; i++) {
@@ -67,13 +40,13 @@ const ProductList = () => {
      
       <div>
         <div className={layoutClassName}>
-          {productsState.success? (
+          {productListSlice.status == "succeeded" ? (
           <>
          <Grid templateColumns="repeat(4, 1fr)" gap={4}>
 			
 					<React.Fragment>
-         
-						{productsState.filteredCategory.products.map((item) => (
+       
+						{productListSlice.items.map((item) => (
 							<Box w="100%" key={item.id}>
 								<Card item={item} />
 							</Box>
