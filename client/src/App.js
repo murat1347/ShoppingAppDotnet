@@ -11,7 +11,6 @@ import Profile from "./pages/Profile";
 import Basket from "./pages/Basket";
 import Admin from "./pages/Admin";
 import Error404 from "./pages/Error404";
-import Search from "./pages/Products/search";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import AddProduct from "./components/addProduct"

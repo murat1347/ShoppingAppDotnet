@@ -50,6 +50,11 @@ namespace HYS.Application.Services.Concrete
             _genericService.Delete(values);
         }
 
+        public List<TEntity> GetAlls()
+        {
+            return _genericService.GetAlls();
+        }
+
         //public async Task<dynamic> Pagging(ProductRequestParams requestParams)
         //{
         //    return await _genericService.Pagging(requestParams);

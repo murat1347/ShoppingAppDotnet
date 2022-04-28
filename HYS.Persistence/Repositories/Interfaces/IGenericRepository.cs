@@ -16,5 +16,6 @@ namespace HYS.Persistence.Repositories.Interfaces
         void Update(TEntity entity);
         void Delete(TEntity entity);
         List<Product> GetAll(string search, int? CategoryId, string sortBy, int page, int PAGE_SIZE);
+        List<TEntity> GetAlls();
     }
 }

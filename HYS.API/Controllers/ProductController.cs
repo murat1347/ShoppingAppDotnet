@@ -21,7 +21,7 @@ namespace HYS.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index([FromQuery] string search, int? CategoryId, string sortBy, int page, int PAGE_SIZE=10)
+        public IActionResult Index([FromQuery] string search, int? CategoryId, string sortBy, int page, int PAGE_SIZE=12)
         {
             // return Ok(_productGenericService.GetAll());
             return Ok(_productGenericService.GetAll( search,CategoryId,sortBy,page,PAGE_SIZE));

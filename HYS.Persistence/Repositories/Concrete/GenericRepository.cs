@@ -47,13 +47,39 @@ namespace HYS.Persistence.Repositories.Concrete
                 switch (sortBy)
                 {
                     case "asc":
-                        allProducts =
-                            (List<Product>)_dbConnection.Query<Product>(
-                                "SELECT * FROM Products WHERE Price > 0 ORDER BY Price ASC"); break;
+                        if (CategoryId.HasValue)
+                        {
+                            var query = "SELECT * FROM Products WHERE CategoryId=" + CategoryId + " ORDER BY Price ASC";
+                            allProducts =
+                                (List<Product>)_dbConnection.Query<Product>(query);
+                            break;
+
+                        }
+                        else
+                        {
+                            allProducts =
+                                (List<Product>)_dbConnection.Query<Product>(
+                                    "SELECT * FROM Products WHERE Price > 0 ORDER BY Price ASC");
+                            break;
+                        }
+
                     case "desc":
-                        allProducts =
-                            (List<Product>)_dbConnection.Query<Product>(
-                                "SELECT * FROM Products WHERE Price > 0 ORDER BY Price DESC"); break;
+                        if (CategoryId.HasValue)
+                        {
+                            var query = "SELECT * FROM Products WHERE CategoryId="+CategoryId+" ORDER BY Price DESC";
+                            allProducts =
+                                (List<Product>) _dbConnection.Query<Product>(query);
+                            break;
+
+                        }
+                        else
+                        { allProducts =
+                                    (List<Product>)_dbConnection.Query<Product>(
+                                        "SELECT * FROM Products WHERE Price > 0 ORDER BY Price DESC");
+                                break;
+                        }
+
+
                 }
             }
 
@@ -62,6 +88,11 @@ namespace HYS.Persistence.Repositories.Concrete
             return result.ToList();
             //return (_dbConnection.GetAll<Product>().ToList());
 
+        }
+
+        public List<TEntity> GetAlls()
+        {
+            return (List<TEntity>) _dbConnection.GetAll<TEntity>();
         }
 
         public TEntity GetById(int id)

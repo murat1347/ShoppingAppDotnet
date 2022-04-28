@@ -20,8 +20,8 @@ namespace HYS.API.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            //return Ok(_categoryGenericService.GetAll());
-            return Ok();
+            return Ok(_categoryGenericService.GetAlls());
+       
         }
 
         //[HttpGet("{id}")]

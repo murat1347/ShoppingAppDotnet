@@ -14,7 +14,7 @@ export const productListSlice = createSlice({
       state.items = items;
     },
     veri: (state, items) => {
-      state.veri.push(items)
+      state.veri=items.payload
     },
   },
   extraReducers: {

@@ -1,26 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getCategory } from "../redux/actions/categoriesActions";
-import { getProducts } from "../redux/actions/productActions";
-import {GetBrands} from "../redux/actions/categoryFilterActions"
-import CategorySlice from "../redux/Category/CategorySlice";
-import productListSlice, { setItems ,veri} from "../redux/Product/productListSlice";
 import { categoryAsync } from "../redux/Category/CategoryService";
 import { productListAsync } from "../redux/Product/ProductListService";
 
+function Brands() {
 
-function Brands () {
-  const state = useSelector((state) => state);
   const [priceFilter, setPriceFilter] = useState("");
   const dispatch = useDispatch();
   const CategorySlice = useSelector((state) => state.CategorySlice)
   const [checkedBrands, setCheckedBrands] = useState([]);
-  const productListSlice= useSelector((state)=> state.productListSlice)
+  const productListSlice = useSelector((state) => state.productListSlice)
+  const datam = useSelector((state) => state.productListSlice.veri)
+
   const handleCheck = (e) => {
     if (e.target.checked) {
       if (!checkedBrands.includes(e.target.id)) {
         setCheckedBrands(e.target.id);
-        }
+      }
     }
     if (!e.target.checked) {
       const filteredArr = [];
@@ -28,10 +24,11 @@ function Brands () {
     }
   };
 
+
   useEffect(() => {
-    let response = dispatch(productListAsync([checkedBrands,priceFilter=='' ? 0 : priceFilter]));
+    let response = dispatch(productListAsync([checkedBrands, priceFilter == '' ? 0 : priceFilter, datam]));
     dispatch(categoryAsync());
-  }, [checkedBrands,priceFilter]);
+  }, [checkedBrands, priceFilter, datam]);
   return (
     <><div className="mb-5">
       <div className="card">
@@ -56,7 +53,7 @@ function Brands () {
                       id={brand.id}
                       onChange={(e) => {
                         handleCheck(e);
-                      } } />
+                      }} />
 
                     <label
                       className="form-check-label"
@@ -96,9 +93,9 @@ function Brands () {
                 }}
                 onClick={() => {
                   setPriceFilter("");
-                  document.getElementById(1).checked = false;
-                  document.getElementById(2).checked = false;
-                } }
+                  document.getElementById("asc").checked = false;
+                  document.getElementById("desc").checked = false;
+                }}
               >
                 Remove Filter
               </span>
@@ -115,7 +112,7 @@ function Brands () {
                     className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
-                    id="1" />
+                    id="asc" />
                   <label
                     className="form-check-label"
                     htmlFor="low"
@@ -132,7 +129,7 @@ function Brands () {
                     className="form-check-input"
                     type="radio"
                     name="flexRadioDefault"
-                    id="2" />
+                    id="desc" />
                   <label
                     className="form-check-label"
                     htmlFor="high"
@@ -150,6 +147,6 @@ function Brands () {
         </div>
       </div></>
   );
-  
+
 };
 export default Brands;

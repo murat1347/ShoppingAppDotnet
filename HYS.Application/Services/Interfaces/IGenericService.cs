@@ -16,7 +16,7 @@ namespace HYS.Application.Services.Interfaces
         public void Update(TEntity entity);
         public void Delete(TEntity entity);
         public void Delete(int id);
-
+        public List<TEntity> GetAlls();
 
     }
 }

@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getProducts } from "../redux/actions/productActions";
 import { Grid, Box } from "@chakra-ui/react";
 import Card from "./Card";
-import { GetBrands } from "../redux/actions/categoryFilterActions";
-import productListSlice from "../redux/Product/productListSlice";
-import { productListAsync } from "../redux/Product/ProductListService";
-import CategorySlice from "../redux/Category/CategorySlice";
+import { veri } from "../redux/Product/productListSlice";
+import Loading from "./Loading";
 
 const ProductList = () => {
   const state = useSelector((state) => state);
@@ -19,12 +16,12 @@ const ProductList = () => {
 
   const layoutClassName = `row row-cols-${columnCount}`;
   const [currentPage, setCurrentPage] = useState(1);
-  const phonesPerPage = 20;
+  const phonesPerPage = 11;
   const indexOfLastPhone = currentPage * phonesPerPage;
   const indexOfFirstPhone = indexOfLastPhone - phonesPerPage;
   //const currentPhones = phones.slice(indexOfFirstPhone, indexOfLastPhone);
-  const pageCount = Math.ceil(productListSlice.length / phonesPerPage);
-  
+  const pageCount = Math.ceil(productListSlice.items.length / phonesPerPage);
+
   let pageNumberArray = [];
   for (let i = 0; i < pageCount; i++) {
     pageNumberArray[i] = (
@@ -35,26 +32,35 @@ const ProductList = () => {
       </li>
     );
   }
+  useEffect(() => {
+    dispatch(veri(currentPage));
+  }
+  );
+
+
+  if(productListSlice.status =="loading"){
+    <Loading/>
+  }
   return (
     <div style={{ width: "75%" }}>
-     
+
       <div>
         <div className={layoutClassName}>
           {productListSlice.status == "succeeded" ? (
-          <>
-         <Grid templateColumns="repeat(4, 1fr)" gap={4}>
-			
-					<React.Fragment>
-       
-						{productListSlice.items.map((item) => (
-							<Box w="100%" key={item.id}>
-								<Card item={item} />
-							</Box>
-						))}
-					</React.Fragment>
-				
-			</Grid>
-        </>
+            <>
+              <Grid templateColumns="repeat(4, 1fr)" gap={4}>
+
+                <React.Fragment>
+
+                  {productListSlice.items.map((item) => (
+                    <Box w="100%" key={item.id}>
+                      <Card item={item} />
+                    </Box>
+                  ))}
+                </React.Fragment>
+
+              </Grid>
+            </>
           ) : null}
         </div>
       </div>
@@ -74,7 +80,7 @@ const ProductList = () => {
           {pageNumberArray.map((li) => li)}
           <li
             className={
-              currentPage == pageCount ? "page-item disabled" : "page-item "
+              currentPage > pageCount || productListSlice.items.length <11? "page-item disabled" : "page-item "
             }
           >
             <button
