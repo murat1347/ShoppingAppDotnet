@@ -2,14 +2,14 @@ import React from "react";
 import "./styles.css";
 
 import { Box } from "@chakra-ui/react";
-import { Link, Switch, Route, useRouteMatch } from "react-router-dom";
+import { Link, Switch,Routes, Route, useMatch} from "react-router-dom";
 
 import Home from "./Home";
 import Products from "./Products";
 import Orders from "./Orders";
 
 function Admin() {
-	const { path, url } = useRouteMatch();
+	const { path, url } = useMatch();
 
 	return (
 		<div>
@@ -28,11 +28,11 @@ function Admin() {
 			</nav>
 
 			<Box mt="10">
-				<Switch>
+				<Routes>
 					<Route exact path={path} component={Home} />
 					<Route path={`${path}/orders`} component={Orders} />
 					<Route path={`${path}/products`} component={Products} />
-				</Switch>
+				</Routes>
 			</Box>
 		</div>
 	);

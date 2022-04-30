@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { categoryAsync } from "../redux/Category/CategoryService";
 import { productListAsync } from "../redux/Product/ProductListService";
+import { useSearchParams,useLocation,useParams,} from "react-router-dom";
+import { useUrlSearchParams } from "use-url-search-params";
 
 function Brands() {
-
+  const search = useLocation().search;
+  const [searchParams, setSearchParams] = useSearchParams();
   const [priceFilter, setPriceFilter] = useState("");
   const dispatch = useDispatch();
   const CategorySlice = useSelector((state) => state.CategorySlice)
@@ -12,10 +15,20 @@ function Brands() {
   const productListSlice = useSelector((state) => state.productListSlice)
   const datam = useSelector((state) => state.productListSlice.veri)
 
+  console.log(useLocation().search)
+  const [params, setParams] = useUrlSearchParams({ CategoryId: "" ,sortBy:""});
+  var CategoryId=searchParams.get('CategoryId')
+  var sortBy = searchParams.get('sortBy')
+
+  const handlePriceCheck = (e)=>{
+    setPriceFilter(e.target.id); setParams({ sortBy: e.target.id })
+  }
+  
   const handleCheck = (e) => {
     if (e.target.checked) {
       if (!checkedBrands.includes(e.target.id)) {
         setCheckedBrands(e.target.id);
+        setParams({ CategoryId: e.target.id })
       }
     }
     if (!e.target.checked) {
@@ -23,12 +36,17 @@ function Brands() {
       setCheckedBrands(filteredArr);
     }
   };
-
-
+useEffect(()=>
+{
+  if(CategoryId && setCheckedBrands(CategoryId))
+  if(sortBy && setPriceFilter(sortBy)){}
+} ,[])
   useEffect(() => {
-    let response = dispatch(productListAsync([checkedBrands, priceFilter == '' ? 0 : priceFilter, datam]));
+
+    const response = dispatch(productListAsync([checkedBrands, priceFilter == '' ? 0 : priceFilter, datam]));
     dispatch(categoryAsync());
-  }, [checkedBrands, priceFilter, datam]);
+  
+  }, [checkedBrands, priceFilter, datam,params.CategoryId,CategoryId]);
   return (
     <><div className="mb-5">
       <div className="card">
@@ -53,7 +71,7 @@ function Brands() {
                       id={brand.id}
                       onChange={(e) => {
                         handleCheck(e);
-                      }} />
+                        }} />
 
                     <label
                       className="form-check-label"
@@ -103,7 +121,8 @@ function Brands() {
           </div>
           <ul
             className="list-group list-group-flush"
-            onChange={(e) => setPriceFilter(e.target.id)}
+            onChange={(e) => handlePriceCheck(e)}
+    
           >
             {CategorySlice && productListSlice ? (
               <>
