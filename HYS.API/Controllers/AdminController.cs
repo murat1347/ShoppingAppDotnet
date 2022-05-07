@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using HYS.Domain.Entities;
 using HYS.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
@@ -9,7 +10,7 @@ namespace HYS.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   
+    [Authorize(Roles = "Admin")]
     public class AdminController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
@@ -28,13 +29,6 @@ namespace HYS.API.Controllers
             return Ok();
         }
 
-        [HttpGet]
-        public IActionResult RoleList()
-        {
-            return Ok(_roleManager.Roles);
-        }
-        
-        
-
+   
     }
 }

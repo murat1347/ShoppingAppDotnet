@@ -6,7 +6,6 @@ import { useSearchParams,useLocation,useParams,} from "react-router-dom";
 import { useUrlSearchParams } from "use-url-search-params";
 
 function Brands() {
-  const search = useLocation().search;
   const [searchParams, setSearchParams] = useSearchParams();
   const [priceFilter, setPriceFilter] = useState("");
   const dispatch = useDispatch();

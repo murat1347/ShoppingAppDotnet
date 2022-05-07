@@ -96,3 +96,10 @@ export const deleteProduct = async (product_id) => {
 
 	return data;
 };
+export const Model = async () => {
+	const { data } = await axios.get(
+		`http://localhost:4988/api/RoleCreate`
+	);
+
+	return data;
+};

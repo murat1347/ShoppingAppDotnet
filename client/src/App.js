@@ -15,6 +15,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import AddProduct from "./components/addProduct"
 import ProductList from "./components/ProductList";
+import RoleList from "./pages/Role/RoleList"
 function App() {
 	return (
 		<Router>
@@ -32,6 +33,7 @@ function App() {
 						<Route path="/basket" element={<Basket />} />
 						<Route path="/profile" element={<Profile />} />
 						<Route path="/admin" element={<Admin />} admin={true} />
+						<Route path="/rolelist" element={<RoleList/>} />
 						<Route path="*" element={<Error404 />} />
 					</Routes>
 				</div>
