@@ -14,7 +14,7 @@ import Error404 from "./pages/Error404";
 import Search from "./pages/Products/search";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
-
+import AddProduct from "./components/addProduct"
 function App() {
 	return (
 		<Router>
@@ -28,6 +28,7 @@ function App() {
 						<Route path="/product/:product_id" component={ProductDetail} />
 						<Route path="/signin" component={Signin} />
 						<Route path="/signup" component={Signup} />
+						<Route path="/addproduct" component={AddProduct} />
 						<Route path="/basket" component={Basket} />
 						<ProtectedRoute path="/profile" component={Profile} />
 						<ProtectedRoute path="/admin" component={Admin} admin={true} />

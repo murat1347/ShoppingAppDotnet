@@ -3,16 +3,19 @@ import { useSelector, useDispatch } from "react-redux";
 import { getCategory } from "../redux/actions/categoriesActions";
 import { getProducts } from "../redux/actions/productActions";
 import {GetBrands} from "../redux/actions/categoryFilterActions"
+import CategorySlice from "../redux/Category/CategorySlice";
+import productListSlice from "../redux/Product/productListSlice";
+import { categoryAsync } from "../redux/Category/CategoryService";
+import { categoryFilterAsync } from "../redux/Category/CategoryFilterService";
+import { productListAsync } from "../redux/Product/ProductListService";
 
 
 function Brands () {
   const state = useSelector((state) => state);
   const dispatch = useDispatch();
-  const categoryState = state.category;
-  //const productsState = state.product;
+  const CategorySlice = useSelector((state) => state.CategorySlice)
   const [checkedBrands, setCheckedBrands] = useState([]);
-  //console.log(checkedBrands);
-  const productsState= state.filteredCategory;
+  const productListSlice= useSelector((state)=> state.productListSlice)
   const handleCheck = (e) => {
     if (e.target.checked) {
       if (!checkedBrands.includes(e.target.id)) {
@@ -21,34 +24,31 @@ function Brands () {
     }
     if (!e.target.checked) {
       const filteredArr = [];
-      
       setCheckedBrands(filteredArr);
-      
-
     }
   };
   useEffect(() => {
-    dispatch(getCategory);
-    // dispatch(getProducts);
-    dispatch(GetBrands(checkedBrands))
-    //  dispatch({ type: "CATEGORY_FILTER_UPDATE", payload: checkedBrands });
+    dispatch(productListAsync(checkedBrands));
+    dispatch(categoryAsync());
+    // dispatch(GetBrands(checkedBrands,2))
+    // dispatch({ type: "changeCategoryFilter", payload: checkedBrands });
   }, [checkedBrands]);
   return (
     <div className="mb-5">
       <div className="card">
         <div className="card-header">PRODUCTS</div>
         <ul className="list-group list-group-flush">
-       {console.log(productsState)}
-          {categoryState.success && productsState.success ? (
+    
+          {CategorySlice.status=="succeeded" && productListSlice.status=="succeeded" ? (
             <>
-           
-              {categoryState.category.map((brand) => {
+              {CategorySlice.items[0].map((brand) => {
               
-                const brandHasPhones = productsState.filteredCategory.products.filter((phone) => {
-                  if (phone.brandId === brand.id) {
+                const brandHasPhones = productListSlice.items.filter((phone) => {
+                  if (phone.id === brand.id) {
                     return true;
                   }
                 });
+
                 return (
                   <li className="list-group-item" key={brand.id}>
                     <input
@@ -68,8 +68,8 @@ function Brands () {
                         marginLeft: "1rem",
                       }}
                     > 
-                      {brand.name[0].toUpperCase() + brand.name.substring(1)} (
-                      {brandHasPhones.length})
+                      {brand.name[0].toUpperCase() + brand.name.substring(1)} 
+                  
                     </label>
                   </li>
                 );

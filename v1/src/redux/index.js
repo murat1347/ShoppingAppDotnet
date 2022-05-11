@@ -1,13 +1,14 @@
-import {combineReducers} from "redux"
-import {categoriesReducer} from "./reducers/categoriesReducer"
-import {productReducer} from "./reducers/productReducer"
-import {priceFilterReducer} from "./reducers/priceFilterReducer"
-import {categoryFilterReducer} from "./reducers/categoryFilterReducer"
-const rootReducer = combineReducers({
-    product:productReducer,
-    priceFilter: priceFilterReducer,
-    category:categoriesReducer,
-    filteredCategory: categoryFilterReducer,
-})
+import CategorySlice from "./Category/CategorySlice";
+import { configureStore } from "@reduxjs/toolkit";
+import addProductSlice from "./Product/addProductSlice";
+import productListSlice from "./Product/productListSlice";
+import CategoryFilterSlice  from "./Category/CategoryFilterReducer";
 
-export default rootReducer;
+export const store = configureStore({
+  reducer: {
+    addProductSlice: addProductSlice,
+    CategorySlice : CategorySlice,
+    productListSlice : productListSlice,
+    CategoryFilterSlice : CategoryFilterSlice,
+  },
+});
